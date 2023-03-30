@@ -29,9 +29,9 @@ TEMA 40. Diseño de bases de datos relacionales
 TEMA 41. Utilidades de los sistemas gestores de base de datos para el desarrollo de aplicaciones. Tipos. Características.  
 
 # Bloque 5
-TEMA 48. Ingeniería del software. Ciclo de desarrollo del software. Tipos de ciclos de desarrollo. Metodologías de desarrollo. Características distintitvas de las principales metodologías de desarrollo utilizadas en la UE.
-TEMA 49. Análisis de sistemas: Modelización de tratamientos. Modelo de flujo de datos y control. Técnicas descriptivas. Documentación.
-TEMA 50. Análisis de sistemas: Modelización conceptual de datos. Técnicas descriptivas. Documentación.
-TEMA 51. Análisis de sistemas: Especificación funcional del sistema. Búsqueda y descripción de requisitos funcionales. Especificación de soluciones técnicas. Análisis de viabilidad técnica y económica
-TEMA 52. Diseño lógico de funciones. Definición de funciones. Descomposición modular. Técnicas descriptivas. Documentación.
-TEMA 53. Diseño lógico de datos. Transformación del modelo conceptual a modelos lógicos. Análisis relacional de datos. Documentación
+TEMA 48. Ingeniería del software. Ciclo de desarrollo del software. Tipos de ciclos de desarrollo. Metodologías de desarrollo. Características   distintitvas de las principales metodologías de desarrollo utilizadas en la UE.  
+TEMA 49. Análisis de sistemas: Modelización de tratamientos. Modelo de flujo de datos y control. Técnicas descriptivas. Documentación.  
+TEMA 50. Análisis de sistemas: Modelización conceptual de datos. Técnicas descriptivas. Documentación.  
+TEMA 51. Análisis de sistemas: Especificación funcional del sistema. Búsqueda y descripción de requisitos funcionales. Especificación de soluciones     técnicas. Análisis de viabilidad técnica y económica  
+TEMA 52. Diseño lógico de funciones. Definición de funciones. Descomposición modular. Técnicas descriptivas. Documentación.  
+TEMA 53. Diseño lógico de datos. Transformación del modelo conceptual a modelos lógicos. Análisis relacional de datos. Documentación  
