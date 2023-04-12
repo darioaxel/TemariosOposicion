@@ -16,8 +16,8 @@ TEMA 23: Diseño de algoritmos. Técnicas descriptivas.
 TEMA 25: Programación estructurada.  
 TEMA 26: Programación modular.  
 TEMA 27: Programación orientada a objetos.  
-TEMA 28: Programación en tiempo real  
-TEMA 30: Prueba y documentación de programas.    
+TEMA 28: Programación en tiempo real.  
+TEMA 30: Prueba y documentación de programas. 
 
 # Bloque 4  
 TEMA 35. La definición de datos. Niveles de descripción. Lenguajes. Diccionario de datos.  
