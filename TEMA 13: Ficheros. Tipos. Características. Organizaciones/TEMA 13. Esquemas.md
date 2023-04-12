@@ -11,35 +11,31 @@ Esta definición abarca la idea básica de que un fichero es una entidad que alm
 Los ficheros son esenciales para la organización y gestión de datos en sistemas operativos y aplicaciones informáticas. Se componen de colecciones de información relacionada que se guarda en un sistema de almacenamiento secundario persistente: discos opticos, magnéticos, etc. Desde el punto de vista del sistema operativo, un fichero es una secuencia de bits, bytes, líneas o registros cuyo significado es definido por el usuario que lo crea. 
 
 ## Estructura de un fichero
-A File Structure should be according to a required format that the operating system can understand.
+La estructura de un fichero debe ajustarse a un formato requerido que el sistema operativo pueda entender.
+Un fichero tiene una estructura definida según su tipo.
+Un fichero de texto es una secuencia de caracteres organizados en líneas.
+Un fichero fuente es una secuencia de procedimientos y funciones.
+Un fichero objeto es una secuencia de bytes organizados en bloques comprensibles por la máquina.
 
-A file has a certain defined structure according to its type.
-
-A text file is a sequence of characters organized into lines.
-
-A source file is a sequence of procedures and functions.
-
-An object file is a sequence of bytes organized into blocks that are understandable by the machine.
-
-When operating system defines different file structures, it also contains the code to support these file structure. Unix, MS-DOS support minimum number of file structure.
+Cuando el sistema operativo define diferentes estructuras de archivos, también contiene el código para soportar estas estructuras de archivos. Unix, MS-DOS soportan un número mínimo de estructuras de ficheros.
 
 # Tipos de ficheros
-File type refers to the ability of the operating system to distinguish different types of file such as text files source files and binary files etc. Many operating systems support many types of files. Operating system like MS-DOS and UNIX have the following types of files −
+El tipo de fichero se refiere a la capacidad del sistema operativo para distinguir diferentes tipos de ficheros, como ficheros de texto, ficheros fuente, ficheros binarios, etc. Muchos sistemas operativos soportan muchos tipos de ficheros. Los sistemas operativos como MS-DOS y UNIX tienen los siguientes tipos de ficheros.
 
-### Ordinary files
-These are the files that contain user information.
-These may have text, databases or executable program.
-The user can apply various operations on such files like add, modify, delete or even remove the entire file.
-### Directory files
-These files contain list of file names and other information related to these files.
-### Special files
-These files are also known as device files.
-These files represent physical device like disks, terminals, printers, networks, tape drive etc.
-These files are of two types −
+### Ficheros ordinarios
+Son los ficheros que contienen información del usuario.
+Pueden contener texto, bases de datos o programas ejecutables.
+El usuario puede aplicar varias operaciones en este tipo de ficheros como añadir, modificar, borrar o incluso eliminar el fichero completo.
+### Archivos de directorio
+Estos archivos contienen una lista de nombres de archivos y otra información relacionada con estos archivos.
+### Archivos especiales
+Estos ficheros también se conocen como ficheros de dispositivo.
+Estos archivos representan dispositivos físicos como discos, terminales, impresoras, redes, unidades de cinta, etc.
+Estos archivos son de dos tipos -
 
-**Character special files** − data is handled character by character as in case of terminals or printers.
+**Ficheros especiales de caracteres** - los datos se tratan carácter por carácter, como en el caso de terminales o impresoras.
 
-**Block special files** − data is handled in blocks as in the case of disks and tapes.
+**Ficheros especiales de bloques**: los datos se tratan en bloques, como en el caso de los discos y las cintas.
 
 # Características
 
@@ -49,29 +45,31 @@ Hay varias operaciones básicas que se pueden realizar con ficheros en un sistem
 * Creación de ficheros:
 
 **touch file.txt**: crea un fichero vacío llamado "file.txt" si no existe. Si el fichero ya existe, actualiza la fecha y hora de su última modificación.
-Lectura de ficheros:
 
-****cat file.txt**: muestra el contenido de "file.txt" en la terminal.
+***Lectura de ficheros:***
+
+**cat file.txt**: muestra el contenido de "file.txt" en la terminal.
 less file.txt: permite navegar por el contenido de "file.txt" de manera interactiva.
-Escritura en ficheros:
+
+***Escritura en ficheros:***
 
 **echo "Hello, world!" > file.txt**: escribe "Hello, world!" en "file.txt", sobrescribiendo su contenido.
 echo "This is a new line" >> file.txt: añade "This is a new line" al final de "file.txt" sin sobrescribir el contenido existente.
-Copia de ficheros:
 
+***Copia de ficheros:***
 **cp source.txt destination.txt**: copia el fichero "source.txt" en "destination.txt". Si "destination.txt" ya existe, se sobrescribe.
-Movimiento y renombramiento de ficheros:
 
+***Movimiento y renombramiento de ficheros:***
 **mv source.txt destination.txt**: mueve el fichero "source.txt" a "destination.txt". Si "destination.txt" ya existe, se sobrescribe. Este comando también se puede utilizar para renombrar un fichero cambiando su ubicación dentro del mismo directorio.
-Eliminación de ficheros:
 
+***Eliminación de ficheros:***
 **rm file.txt**: elimina el fichero "file.txt".
 rm -f file.txt: elimina el fichero "file.txt" sin pedir confirmación.
-Cambio de permisos de ficheros:
 
+***Cambio de permisos de ficheros:***
 **chmod 644 file.txt**: cambia los permisos de "file.txt" a lectura y escritura para el propietario, lectura para el grupo y lectura para otros usuarios.
-Comprimir y descomprimir ficheros:
 
+***Comprimir y descomprimir ficheros:***
 **gzip file.txt**: comprime el fichero "file.txt" y lo guarda como "file.txt.gz".
 gunzip file.txt.gz: descomprime el fichero "file.txt.gz" y lo guarda como "file.txt".
 
@@ -91,45 +89,46 @@ El acceso directo (también conocido como acceso aleatorio o random) a ficheros 
 
 El acceso directo a ficheros funciona de la siguiente manera:
 
-Identificación de la posición deseada: El programa o la aplicación determina la posición exacta dentro del archivo donde se desea leer o escribir datos. Esta posición se mide en bytes desde el comienzo del archivo y se llama "offset" o desplazamiento.
+- Identificación de la posición deseada: El programa o la aplicación determina la posición exacta dentro del archivo donde se desea leer o escribir datos. Esta posición se mide en bytes desde el comienzo del archivo y se llama "offset" o desplazamiento.
 
-Posicionamiento del puntero de archivo: Antes de leer o escribir datos en la posición deseada, es necesario posicionar el puntero de archivo en el offset correspondiente. La mayoría de los lenguajes de programación y sistemas operativos proporcionan funciones o llamadas al sistema para realizar esta tarea (por ejemplo, fseek() en C, seek() en Python, lseek() en llamadas al sistema de Linux).
+- Posicionamiento del puntero de archivo: Antes de leer o escribir datos en la posición deseada, es necesario posicionar el puntero de archivo en el offset correspondiente. La mayoría de los lenguajes de programación y sistemas operativos proporcionan funciones o llamadas al sistema para realizar esta tarea (por ejemplo, fseek() en C, seek() en Python, lseek() en llamadas al sistema de Linux).
 
-Lectura o escritura de datos: Una vez que el puntero de archivo está en la posición correcta, se pueden leer o escribir datos directamente en esa posición utilizando las funciones de lectura y escritura estándar proporcionadas por el lenguaje de programación o el sistema operativo (por ejemplo, fread() y fwrite() en C, read() y write() en Python, read() y write() en llamadas al sistema de Linux).
+- Lectura o escritura de datos: Una vez que el puntero de archivo está en la posición correcta, se pueden leer o escribir datos directamente en esa posición utilizando las funciones de lectura y escritura estándar proporcionadas por el lenguaje de programación o el sistema operativo (por ejemplo, fread() y fwrite() en C, read() y write() en Python, read() y write() en llamadas al sistema de Linux).
 
-Actualización del puntero de archivo: Después de leer o escribir datos, el puntero de archivo se actualizará automáticamente para apuntar a la siguiente posición en el archivo. Si se requiere realizar más operaciones de acceso directo, el proceso se repite desde el paso 2.
-Random access file organization provides, accessing the records directly.
-> Each record has its own address on the file with by the help of which it can be directly accessed for reading or writing.
+- Actualización del puntero de archivo: Después de leer o escribir datos, el puntero de archivo se actualizará automáticamente para apuntar a la siguiente posición en el archivo. Si se requiere realizar más operaciones de acceso directo, el proceso se repite desde el paso 2.
 
-The records need not be in any sequence within the file and they need not be in adjacent locations on the storage medium.
+La organización de archivos de acceso aleatorio permite acceder directamente a los registros.
 
-**Indexed sequential access**
-This mechanism is built up on base of sequential access.
-An index is created for each file which contains pointers to various blocks.
-Index is searched sequentially and its pointer is used to access the file directly.
+> Cada registro tiene su propia dirección en el archivo con la ayuda de la cual se puede acceder directamente para leer o escribir.
 
-## Space Allocation
-Files are allocated disk spaces by operating system. Operating systems deploy following three main ways to allocate disk space to files.
+Los registros no necesitan estar en ninguna secuencia dentro del archivo y no necesitan estar en ubicaciones adyacentes en el medio de almacenamiento.
 
-- Contiguous Allocation
-- Linked Allocation
-- Indexed Allocation
+**Acceso secuencial indexado**
 
+Este mecanismo se basa en el acceso secuencial.
+Se crea un índice para cada fichero que contiene punteros a varios bloques.
+El índice se busca secuencialmente y su puntero se utiliza para acceder directamente al fichero.
 
-### Contiguous Allocation
+## Asignación de espacio
+El sistema operativo asigna espacios de disco a los archivos. Los sistemas operativos utilizan tres formas principales para asignar espacio de disco a los archivos.
 
-Each file occupies a contiguous address space on disk.
-Assigned disk address is in linear order.
-Easy to implement.
-External fragmentation is a major issue with this type of allocation technique.
-### Linked Allocation
-Each file carries a list of links to disk blocks.
-Directory contains link / pointer to first block of a file.
-No external fragmentation
-Effectively used in sequential access file.
-Inefficient in case of direct access file.
-### Indexed Allocation
-Provides solutions to problems of contiguous and linked allocation.
-A index block is created having all pointers to files.
-Each file has its own index block which stores the addresses of disk space occupied by the file.
-Directory contains the addresses of index blocks of files.
+- Asignación contigua
+- Asignación vinculada
+- Asignación indexada
+
+### Asignación contigua
+Cada archivo ocupa un espacio de dirección contiguo en el disco.
+Las direcciones de disco asignadas siguen un orden lineal.
+Fácil de implementar.
+La fragmentación externa es un problema importante con este tipo de técnica de asignación.
+### Asignación vinculada
+Cada fichero lleva una lista de enlaces a bloques de disco.
+El directorio contiene el enlace / puntero al primer bloque de un fichero.
+No hay fragmentación externa
+Eficaz en ficheros de acceso secuencial.
+Ineficiente en caso de archivo de acceso directo.
+### Asignación indexada
+Proporciona soluciones a los problemas de asignación contigua y vinculada.
+Se crea un bloque índice que contiene todos los punteros a los ficheros.
+Cada fichero tiene su propio bloque índice que almacena las direcciones del espacio de disco ocupado por el fichero.
+El directorio contiene las direcciones de los bloques índice de los ficheros.
