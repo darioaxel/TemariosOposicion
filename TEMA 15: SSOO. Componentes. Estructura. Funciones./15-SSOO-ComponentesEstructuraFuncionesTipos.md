@@ -1,6 +1,8 @@
 # Tema 15. SSOO. Componentes. Estructura. Funciones.
 
 # Introducción
+
+## Historia de los SS.OO.
 Los sistemas operativos (SSOO) han evolucionado a lo largo de la historia de la informática, adaptándose y mejorando con el tiempo para satisfacer las necesidades cambiantes de los usuarios y aprovechar los avances en la tecnología del hardware. A continuación, se presenta una breve introducción a los sistemas operativos actuales, mencionando ejemplos históricos y hitos importantes:
 
 Los primeros sistemas operativos surgieron en la década de 1950 con la aparición de las primeras computadoras. Estos sistemas eran simples y se centraban en la ejecución de tareas por lotes, es decir, la ejecución secuencial de programas sin interacción con el usuario. Ejemplos de estos primeros sistemas operativos incluyen el IBM 701 y el General Motors-North American Aviation Monitor.
@@ -88,3 +90,51 @@ Los tipos de sistemas operativos más relevantes que han existido a lo largo de 
 
 - Sistemas operativos móviles: Los sistemas operativos móviles están diseñados para dispositivos móviles, como teléfonos inteligentes y tabletas. Estos sistemas operativos ofrecen funciones específicas para dispositivos móviles, como una interfaz táctil, soporte para aplicaciones móviles, conectividad inalámbrica y funciones de ahorro de energía.
 
+## Clasificación de los sistemas operativos
+
+Algunas de las clasificaciones más comunes son:
+
+* Según la cantidad de usuarios:
+a) Monousuario: Sistemas operativos diseñados para ser utilizados por un único usuario en un momento dado. Ejemplo: MS-DOS.
+b) Multiusuario: Sistemas operativos que permiten la utilización simultánea por parte de múltiples usuarios, proporcionando mecanismos de protección y aislamiento entre ellos. Ejemplo: UNIX, Linux.
+
+* Según la cantidad de tareas:
+a) Monotarea: Sistemas operativos que solo pueden ejecutar un proceso o tarea a la vez. Ejemplo: MS-DOS.
+b) Multitarea: Sistemas operativos que permiten la ejecución simultánea de múltiples procesos o tareas, gestionando el tiempo y los recursos que se asignan a cada uno. Ejemplo: Windows, macOS, Linux.
+
+* Según la estructura:
+a) Monolíticos: Sistemas operativos cuyo núcleo incluye todos los servicios y controladores de hardware en un único bloque de código. Ejemplo: UNIX tradicional.
+b) Microkernel: Sistemas operativos con un núcleo mínimo que solo proporciona servicios básicos, mientras que los servicios adicionales se implementan en procesos separados. Ejemplo: Minix, QNX.
+c) Exokernel: Sistemas operativos que permiten a las aplicaciones acceder directamente al hardware, proporcionando un control más detallado sobre los recursos. Ejemplo: ExOS, Aegis.
+
+* Según el tipo de computadora o dispositivo:
+a) Sistemas operativos para mainframes: Diseñados para ser utilizados en grandes sistemas informáticos que manejan grandes volúmenes de datos y usuarios. Ejemplo: z/OS de IBM.
+b) Sistemas operativos para servidores: Orientados a proporcionar servicios a otros sistemas o dispositivos en una red. Ejemplo: Windows Server, Linux.
+c) Sistemas operativos para estaciones de trabajo y computadoras personales: Diseñados para uso individual o en grupos de trabajo. Ejemplo: Windows, macOS, Linux.
+d) Sistemas operativos para dispositivos móviles: Diseñados específicamente para dispositivos móviles como teléfonos inteligentes y tabletas. Ejemplo: Android, iOS.
+
+* Según la aplicación y el entorno:
+a) Sistemas operativos de propósito general: Diseñados para ser utilizados en una amplia variedad de aplicaciones y entornos. Ejemplo: Windows, macOS, Linux.
+b) Sistemas operativos de tiempo real: Diseñados para sistemas que requieren una respuesta rápida y predecible a eventos externos, como sistemas de control industrial o robótica. Ejemplo: QNX, VxWorks.
+c) Sistemas operativos embebidos: Diseñados para ser utilizados en sistemas embebidos o dispositivos de propósito específico. Ejemplo: FreeRTOS, Embedded Linux.
+
+Estas clasificaciones no son mutuamente excluyentes, y un sistema operativo puede pertenecer a varias categorías al mismo tiempo. Por ejemplo, Linux es un sistema operativo multiusuario, multitarea y de propósito general, que puede ser utilizado en servidores
+
+## Sistemas Operativos Actual
+
+Android es un sistema operativo que puede ser clasificado y descrito de la siguiente manera, según las clasificaciones, estructuras y tipos proporcionados por los autores mencionados:
+
+Cantidad de usuarios: Android es principalmente un sistema operativo monousuario, ya que está diseñado para ser utilizado por un único usuario en dispositivos como teléfonos inteligentes y tabletas. Sin embargo, admite múltiples perfiles de usuario con ciertas restricciones y aislamiento entre ellos, especialmente en el caso de tabletas.
+
+Cantidad de tareas: Android es un sistema operativo multitarea, ya que permite la ejecución simultánea de múltiples procesos y aplicaciones. Gestiona el tiempo y los recursos asignados a cada proceso y puede suspender y reanudar aplicaciones según sea necesario para optimizar el rendimiento y la duración de la batería.
+
+Estructura: Android utiliza un enfoque de kernel monolítico modificado, basado en el kernel de Linux. El kernel de Linux proporciona servicios básicos de sistemas operativos y controladores de hardware. Sin embargo, Android también incorpora componentes adicionales, como la máquina virtual de Android (Dalvik o ART) y los servicios de Google, que permiten ejecutar aplicaciones específicas de Android y proporcionan una capa de abstracción adicional entre el hardware y las aplicaciones.
+
+Tipo de computadora o dispositivo: Android es un sistema operativo para dispositivos móviles, diseñado específicamente para teléfonos inteligentes, tabletas y otros dispositivos móviles, como relojes inteligentes y televisores.
+
+Aplicación y entorno: Android es un sistema operativo de propósito general para dispositivos móviles, ya que admite una amplia variedad de aplicaciones y entornos. Sin embargo, también puede adaptarse para su uso en sistemas embebidos y dispositivos de propósito específico, como sistemas de entretenimiento en automóviles o dispositivos IoT.
+
+# Bibliografía
+* De Miguel Anasagasti, P., & Gómez Pérez, J. J. (1999). Sistemas Operativos: una visión aplicada. McGraw-Hill/Interamericana de España.
+* Tanenbaum, A. S., & Bos, H. (2014). Modern Operating Systems (4th ed.). Pearson.
+* Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). Operating System Concepts (10th ed.). John Wiley & Sons.
