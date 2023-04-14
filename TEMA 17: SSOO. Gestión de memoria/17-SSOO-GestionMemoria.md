@@ -1,3 +1,5 @@
+
+
 En general, quizás el 50 por ciento del espacio total de memoria de un ordenador puede estar sin utilizar en un momento dado. El sistema operativo posee y gestiona la memoria no utilizada, y se conoce colectivamente como el heap. El heap es extremadamente importante porque está disponible para ser utilizado por las aplicaciones durante la ejecución mediante las funciones C malloc (asignación de memoria) y free (liberación). El heap permite a los programas asignar memoria exactamente cuando la necesitan durante la ejecución de un programa, en lugar de preasignarla con una declaración de matriz de tamaño específico.
 
 La respuesta rápida es: El Garbage Collector (GC) administra de forma automática la memoria, ya que es el encargado de liberar los objetos que ya no están en uso y que no serán usados en el futuro.
