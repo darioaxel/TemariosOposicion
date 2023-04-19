@@ -74,6 +74,20 @@ En la actualidad, los sistemas operativos modernos, como Windows, Linux y macOS,
 
 ----
 
+El **heap**, también conocido como montículo, es una región de la memoria gestionada por el sistema operativo en la que se asigna memoria dinámicamente a los programas en tiempo de ejecución. A diferencia de la memoria asignada en la pila (stack), la memoria asignada en el heap no sigue un patrón estructurado de acceso (como el comportamiento LIFO en la pila). La asignación de memoria en el heap se realiza según las necesidades del programa y se libera explícitamente cuando ya no es necesaria.
+
+El heap es fundamental para la gestión de memoria en un sistema operativo, ya que proporciona flexibilidad en la asignación de memoria y permite el uso eficiente de recursos en situaciones donde el tamaño de la memoria requerida no se conoce en tiempo de compilación. A continuación, se describen algunas características del funcionamiento del heap y cómo aporta a la gestión de memoria en un sistema operativo:
+
+Asignación dinámica de memoria: La principal ventaja del heap es que permite asignar memoria dinámicamente en tiempo de ejecución. Los programas pueden solicitar y liberar memoria según sea necesario, lo que permite a los sistemas operativos gestionar eficientemente los recursos y adaptarse a las necesidades de memoria de los programas.
+
+Persistencia: A diferencia de la memoria asignada en la pila, la memoria en el heap no se libera automáticamente cuando una función termina su ejecución. Esto hace que el heap sea útil para almacenar estructuras de datos y objetos cuyo tiempo de vida excede el alcance de la función o el bloque de código en el que se crean.
+
+Fragmentación: El heap está sujeto a la fragmentación, ya que la asignación y liberación de memoria se realiza de manera arbitraria. La fragmentación puede resultar en un uso ineficiente del espacio de memoria y una degradación del rendimiento del sistema. Los sistemas operativos emplean algoritmos de asignación de memoria y técnicas de compactación para minimizar la fragmentación y mejorar el rendimiento.
+
+Funciones de asignación y liberación de memoria: Los lenguajes de programación proporcionan funciones específicas para solicitar y liberar memoria en el heap, como malloc(), calloc(), realloc() y free() en C o new y delete en C++. Estas funciones interactúan con el sistema operativo para gestionar la asignación y liberación de memoria en el heap.
+
+Gestión de memoria automática: En algunos lenguajes de programación, como Java o Python, la gestión de memoria en el heap es automática, utilizando un recolector de basura (garbage collector) que libera automáticamente la memoria no utilizada por el programa. Esto reduce la carga en el programador para gestionar explícitamente la asignación y liberación de memoria, pero puede introducir una sobrecarga adicional en el sistema operativo y afectar el rendimiento en ciertas situaciones.
+
 En general, quizás el 50 por ciento del espacio total de memoria de un ordenador puede estar sin utilizar en un momento dado. El sistema operativo posee y gestiona la memoria no utilizada, y se conoce colectivamente como el heap. El heap es extremadamente importante porque está disponible para ser utilizado por las aplicaciones durante la ejecución mediante las funciones C malloc (asignación de memoria) y free (liberación). El heap permite a los programas asignar memoria exactamente cuando la necesitan durante la ejecución de un programa, en lugar de preasignarla con una declaración de matriz de tamaño específico.
 
 La respuesta rápida es: El Garbage Collector (GC) administra de forma automática la memoria, ya que es el encargado de liberar los objetos que ya no están en uso y que no serán usados en el futuro.
