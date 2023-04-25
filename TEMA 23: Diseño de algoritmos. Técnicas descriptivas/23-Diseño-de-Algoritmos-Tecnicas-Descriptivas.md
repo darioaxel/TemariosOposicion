@@ -92,7 +92,7 @@ Las principales técnicas de diseño de algoritmos incluyen:
 
 # Técnicas descriptivas
 
-Pseudocódigo: El pseudocódigo es una representación textual de alto nivel de un algoritmo que utiliza una sintaxis similar a la de un lenguaje de programación pero es más fácil de entender y no requiere conocimientos específicos de un lenguaje. Un ejemplo de pseudocódigo para el algoritmo de búsqueda binaria es:
+**Pseudocódigo**: El pseudocódigo es una representación textual de alto nivel de un algoritmo que utiliza una sintaxis similar a la de un lenguaje de programación pero es más fácil de entender y no requiere conocimientos específicos de un lenguaje. Un ejemplo de pseudocódigo para el algoritmo de búsqueda binaria es:
 ```
 Función búsqueda_binaria(A, valor):
     inicio = 0
@@ -109,21 +109,25 @@ Función búsqueda_binaria(A, valor):
 
     retornar -1
 ```
-Diagramas de flujo: Los diagramas de flujo son representaciones gráficas de algoritmos que utilizan símbolos y conectores para mostrar el flujo de control y las operaciones realizadas. Un ejemplo de diagrama de flujo para el algoritmo de búsqueda binaria se puede encontrar en este enlace: https://www.edrawsoft.com/algorithm-flowchart-binary-search.php
+**Diagramas de flujo**: Los diagramas de flujo son representaciones gráficas de algoritmos que utilizan símbolos y conectores para mostrar el flujo de control y las operaciones realizadas. Un ejemplo de diagrama de flujo :
+![Flow Diagram](images/LampFlowchart.svg.png)
 
-Diagramas Nassi-Shneiderman (N-S): Los diagramas N-S son una representación gráfica estructurada que utiliza bloques anidados para representar la estructura de control y las operaciones de un algoritmo. Un ejemplo de diagrama N-S para el algoritmo de búsqueda binaria se puede encontrar en este enlace: https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram#/media/File:Nassi-Shneiderman_diagram_for_binary_search.svg
+**Diagramas Nassi-Shneiderman (N-S)**: Los diagramas N-S son una representación gráfica estructurada que utiliza bloques anidados para representar la estructura de control y las operaciones de un algoritmo. Un ejemplo de diagrama N-S para el algoritmo de búsqueda binaria es: 
+![Nassi-Shneiderman](images/binarysearch.png)
 
-Tablas de decisión: Las tablas de decisión son una técnica de representación gráfica que se utiliza principalmente para modelar la lógica de decisión en algoritmos basados en reglas. Un ejemplo de tabla de decisión podría ser el cálculo del precio de un producto con descuentos en función de ciertas condiciones:
+**Tablas de decisión**: Las tablas de decisión son una técnica de representación gráfica que se utiliza principalmente para modelar la lógica de decisión en algoritmos basados en reglas. Un ejemplo de tabla de decisión podría ser el cálculo del precio de un producto con descuentos en función de ciertas condiciones:
 
-yaml
-Copy code
+
 | Condición 1: Precio >= 100 | Condición 2: Cliente VIP | Acción: Aplicar descuento |
 |-----------------------------|--------------------------|--------------------------|
 |            Verdadero        |        Verdadero         |         20%              |
 |            Verdadero        |        Falso             |         10%              |
 |            Falso            |        Verdadero         |         5%               |
 |            Falso            |        Falso             |         0%               |
-Diagramas de actividad UML: Los diagramas de actividad UML son una técnica de modelado gráfico que se utiliza para representar el flujo de control y las acciones realizadas en un algoritmo o proceso. Los diagramas de actividad UML incluyen elementos como nodos de acción, nodos de decisión, nodos de bifurcación y nodos de unión. Un ejemplo de diagrama de actividad UML para el algoritmo de búsqueda binaria se puede encontrar en este enlace: https://creately.com/blog/wp-content/uploads/2012/10/Binary-Search-Activity-Diagram.png
+
+**Diagramas de actividad UML**: Los diagramas de actividad UML son una técnica de modelado gráfico que se utiliza para representar el flujo de control y las acciones realizadas en un algoritmo o proceso. Los diagramas de actividad UML incluyen elementos como nodos de acción, nodos de decisión, nodos de bifurcación y nodos de unión. 
+
+![UML Activity](images/uml-activity.png)
 
 
 
