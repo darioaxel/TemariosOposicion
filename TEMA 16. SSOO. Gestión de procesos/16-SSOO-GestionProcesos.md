@@ -57,11 +57,11 @@ El Bloque de Control de Procesos (BCP) es una estructura de datos que contiene i
 ### El ciclo de vida de un proceso
 Según Tanenbaum (2015), incluye varias etapas:
 
-Creación: el sistema operativo crea un nuevo proceso y asigna recursos.
-Ejecución: el proceso se encuentra en la CPU y se ejecuta.
-Bloqueo: el proceso espera un evento, como la finalización de una operación de E/S.
-Desbloqueo: el proceso es despertado por un evento y se encuentra listo para ejecutarse.
-Terminación: el proceso ha completado su ejecución y libera los recursos asignados.
+- Creación: el sistema operativo crea un nuevo proceso y asigna recursos.
+- Ejecución: el proceso se encuentra en la CPU y se ejecuta.
+- Bloqueo: el proceso espera un evento, como la finalización de una operación de E/S.
+- Desbloqueo: el proceso es despertado por un evento y se encuentra listo para ejecutarse.
+- Terminación: el proceso ha completado su ejecución y libera los recursos asignados.
 
 ### Concurrencia entre procesos
 
@@ -88,6 +88,15 @@ Cuando una interrupción ocurre, el sistema operativo debe realizar un cambio de
 - Reanudar la ejecución del nuevo proceso: Finalmente, el sistema operativo reanuda la ejecución del nuevo proceso, comenzando desde el punto en el que fue interrumpido previamente.
 
 El cambio de procesos por una interrupción permite que el sistema operativo responda a eventos externos y garantice un reparto justo de recursos y tiempo de CPU entre los diferentes procesos.
+## Hilos (Threads)
+
+Un hilo, también conocido como "thread" en inglés, es una unidad básica de ejecución dentro de un proceso. Un proceso puede contener múltiples hilos que se ejecutan concurrentemente y comparten el mismo espacio de memoria y recursos del sistema. Los hilos permiten a un proceso realizar múltiples tareas simultáneamente, mejorando el rendimiento y la capacidad de respuesta del sistema.
+
+Cada hilo tiene su propio conjunto de registros, una pila de llamadas y un contador de programa, lo que le permite mantener su propio flujo de control y ejecutar instrucciones de forma independiente de otros hilos. Sin embargo, los hilos de un mismo proceso comparten el espacio de direcciones de memoria, los archivos abiertos, los descriptores de recursos y otras estructuras de datos del proceso.
+
+La introducción de hilos en los sistemas operativos permite una mayor concurrencia y paralelismo en la ejecución de programas. Esto es especialmente útil en aplicaciones que realizan múltiples tareas simultáneas, como servidores web, aplicaciones de bases de datos o programas de interfaz gráfica de usuario.
+
+La gestión de hilos en un sistema operativo es similar a la gestión de procesos, pero con un menor costo de creación, cambio de contexto y terminación. Los sistemas operativos pueden proporcionar soporte para hilos a nivel de usuario (User-Level Threads) o a nivel de núcleo (Kernel-Level Threads), dependiendo de la implementación y las necesidades del sistema.  
 
 # Gestión de procesos
 ## Comunicación entre procesos (IPC):
