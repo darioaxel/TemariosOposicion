@@ -138,4 +138,4 @@ Función búsqueda_binaria(A, valor):
 
 > Knuth, D. E. (1997). The Art of Computer Programming. Addison-Wesley.  
 
->Gane, C., & Sarson, T. (1979). Structured Systems Analysis: Tools and Techniques. Prentice Hall.  
+> Gane, C., & Sarson, T. (1979). Structured Systems Analysis: Tools and Techniques. Prentice Hall.  
