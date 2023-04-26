@@ -103,9 +103,17 @@ La gestión de hilos en un sistema operativo es similar a la gestión de proceso
 
 La comunicación entre procesos (IPC, por sus siglas en inglés) permite que los procesos compartan información y colaboren en la realización de tareas. Existen dos enfoques principales para la IPC (Tanenbaum, 2015):
 
-Pasaje de mensajes: Los procesos se comunican enviándose mensajes entre sí. Los mensajes pueden contener información, instrucciones o solicitudes. Ejemplos de sistemas que utilizan pasaje de mensajes incluyen sistemas basados en microkernel como Minix y L4, así como el mecanismo de "pipes" en sistemas Unix.
+Tubos (pipes): Los pipes permiten la comunicación unidireccional entre dos procesos relacionados. Un proceso escribe en un extremo del pipe, mientras que el otro proceso lee del otro extremo. Los pipes son útiles para implementar la comunicación en secuencias de procesos en sistemas operativos como Unix y Linux.
 
-Memoria compartida: Los procesos comparten una región de memoria, lo que les permite leer y escribir datos directamente en la misma área. Ejemplos de sistemas que utilizan memoria compartida incluyen los sistemas operativos Windows y Unix, que ofrecen funciones específicas para crear y administrar regiones de memoria compartida.
+Tubos con nombre (named pipes): Los named pipes son similares a los pipes regulares, pero permiten la comunicación entre procesos no relacionados. Los named pipes tienen un nombre en el sistema de archivos y pueden ser accedidos por cualquier proceso que tenga los permisos adecuados. Son comunes en sistemas operativos Unix, Linux y Windows.
+
+Sockets: Los sockets son mecanismos de comunicación bidireccional que permiten a los procesos comunicarse a través de redes o en la misma máquina. Los sockets son ampliamente utilizados en aplicaciones de red y sistemas distribuidos, y están disponibles en la mayoría de los sistemas operativos, incluidos Unix, Linux, Windows y macOS.
+
+Memoria compartida: La memoria compartida es un mecanismo de IPC que permite a varios procesos acceder a una región de memoria común. Los procesos pueden leer y escribir en la memoria compartida para intercambiar información. La memoria compartida es un método de comunicación eficiente y de alto rendimiento, pero requiere la implementación de mecanismos de sincronización para evitar condiciones de carrera y garantizar la coherencia de los datos.
+
+Mensajería (message passing): La mensajería es un mecanismo de IPC en el que los procesos intercambian mensajes para comunicarse y sincronizarse. Los mensajes pueden ser enviados a través de canales de comunicación establecidos entre procesos y pueden ser de tamaño fijo o variable. Los sistemas operativos y las bibliotecas de programación a menudo proporcionan funciones y abstracciones para facilitar el paso de mensajes entre procesos.
+
+Señales (signals): Las señales son un mecanismo de IPC que permite a los procesos enviar notificaciones de eventos a otros procesos. Las señales se utilizan para indicar la ocurrencia de eventos como interrupciones, terminación de procesos o cambios en el estado del sistema. Los sistemas operativos como Unix, Linux y Windows proporcionan soporte para señales y funciones para enviar, recibir y manejar señales entre procesos.
 
 ## Sincronización de procesos:
 
