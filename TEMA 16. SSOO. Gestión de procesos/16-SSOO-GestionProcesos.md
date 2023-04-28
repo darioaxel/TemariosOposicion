@@ -139,17 +139,24 @@ La inanición ocurre cuando un proceso no puede acceder a un recurso necesario p
 
 ### Condiciones y prevención:
 
-La competencia y la inanición pueden ser causadas por diversas condiciones y factores, como la asignación inadecuada de recursos, la falta de sincronización entre procesos o políticas de planificación ineficientes. Para prevenir o mitigar estos problemas, los sistemas operativos pueden implementar diversas estrategias y mecanismos:
+La competencia y la inanición pueden ser causadas por diversas condiciones y factores, como la asignación inadecuada de recursos, la falta de sincronización entre procesos o políticas de planificación ineficientes.
 
-- Sincronización de procesos: Utilizar mecanismos de sincronización, como semáforos, monitores y variables de condición, para garantizar que los procesos accedan a los recursos compartidos de manera ordenada y controlada, evitando así la competencia y la inanición.
+Las condiciones de Coffman fueron identificadas por primera vez por Edward G. Coffman, Jr., y sus colaboradores en 1971. Estas condiciones describen las cuatro circunstancias necesarias y suficientes que deben ocurrir simultáneamente para que se produzca un interbloqueo en un sistema:
 
-- Planificación de procesos justa: Implementar políticas de planificación de procesos que garanticen una distribución equitativa del tiempo de CPU y los recursos del sistema entre todos los procesos, evitando la monopolización de recursos por parte de procesos de alta prioridad o demanda.
+- Exclusión mutua: Al menos un recurso debe ser compartido y no se puede utilizar por más de un proceso a la vez.
+- Espera mientras se mantiene (hold and wait): Los procesos deben mantener al menos un recurso mientras esperan adquirir recursos adicionales.
+- No apropiación (no preemption): Los recursos no pueden ser retirados forzosamente de un proceso que los está utilizando; solo el proceso que tiene el recurso puede liberarlo voluntariamente.
+- Espera circular (circular wait): Debe existir un conjunto de procesos esperando recursos en una cadena circular, donde cada proceso está esperando un recurso que está siendo retenido por el siguiente proceso en la cadena.  
 
-- Asignación dinámica de prioridades: Ajustar dinámicamente las prioridades de los procesos en función de su tiempo de espera o consumo de recursos, de modo que los procesos en inanición puedan recibir una prioridad más alta y, finalmente, acceder a los recursos necesarios.
+Para evitar interbloqueos, un sistema operativo debe diseñarse para eliminar al menos una de las condiciones de Coffman. Algunas estrategias para prevenir interbloqueos incluyen:
 
-- Control de acceso a recursos compartidos: Establecer límites y cuotas en la utilización de recursos compartidos, como la memoria, el almacenamiento y la E/S, para evitar que un proceso monopolice un recurso y cause inanición en otros procesos.
+- Prevención de interbloqueos: Se asegura que el sistema nunca entre en un estado de interbloqueo al negar una o más condiciones de Coffman. Por ejemplo, se puede requerir que los procesos soliciten todos los recursos que necesitarán al mismo tiempo (eliminando la condición de espera mientras se mantiene), o se puede implementar una política de apropiación de recursos (eliminando la condición de no apropiación).
 
-- Prevención de condiciones de carrera: Implementar técnicas de programación y diseño que eviten condiciones de carrera, lo que puede contribuir a la competencia y la inanición de procesos.
+- Evitación de interbloqueos: Se permite que las condiciones de Coffman existan, pero se evalúa dinámicamente si otorgar o denegar las solicitudes de recursos podría llevar al sistema a un estado de interbloqueo. Un algoritmo comúnmente utilizado para la evitación de interbloqueos es el algoritmo del banquero.
+
+- Detección y recuperación de interbloqueos: Se permite que el sistema entre en estados de interbloqueo, pero se implementan mecanismos para detectar y recuperarse de dichos estados. La detección de interbloqueos puede implicar el uso de gráficos de asignación de recursos y la búsqueda de ciclos en estos gráficos. La recuperación puede involucrar la terminación de procesos o la apropiación de recursos para romper el interbloqueo.
+
+- Ignorar el problema: En algunos casos, el costo de prevenir, evitar o recuperarse de interbloqueos puede ser mayor que el costo de lidiar con interbloqueos ocasionales. En estos casos, un sistema operativo puede optar por no abordar el problema de interbloqueo y dejar que el usuario o el administrador del sistema maneje situaciones de interbloqueo según sea necesario.
 
 ## Planificación de procesos:
 Los objetivos de la planificación de procesos en un sistema operativo son garantizar la utilización eficiente y justa de los recursos del sistema, así como proporcionar un buen rendimiento y una experiencia de usuario adecuada. Según la bibliografía estudiada (Stallings, 2018; Tanenbaum, 2015; Patterson & Hennessy, 2018), los objetivos principales de la planificación de procesos son:
