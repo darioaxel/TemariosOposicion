@@ -130,12 +130,11 @@ El servidor sigue utilizando epoll_wait para monitorear los eventos de E/S y pro
 Io_uring es un mecanismo de E/S asincrónica y no bloqueante más reciente y avanzado en Linux, introducido en el kernel 5.1. A diferencia de epoll, io_uring utiliza colas de envío y finalización para manejar operaciones de E/S, lo que permite un mejor rendimiento y una interfaz más fácil de usar.
 
 Supongamos que tenemos un servidor TCP que maneja múltiples conexiones de cliente simultáneamente utilizando io_uring. Los pasos a seguir son:
-
-El servidor crea un socket y lo configura en modo no bloqueante.
-El servidor configura io_uring utilizando la llamada al sistema io_uring_setup, lo que crea una cola de envío y una cola de finalización.
-El servidor registra el descriptor de archivo del socket en io_uring.
-El servidor envía operaciones de E/S a la cola de envío utilizando io_uring_prep y io_uring_submit. Por ejemplo, puede enviar una operación de aceptación para aceptar nuevas conexiones de cliente.
-El servidor utiliza io_uring_wait_cqe para esperar la finalización de las operaciones de E/S en la cola de finalización.
-Cuando se completa una operación de E/S, como aceptar una nueva conexión de cliente, el servidor procesa el resultado y envía más operaciones de E/S según sea necesario, por ejemplo, leer y escribir datos en las conexiones de cliente.
-El servidor sigue utilizando io_uring_wait_cqe para monitorear la finalización de las operaciones de E/S y procesar las conexiones de los clientes de forma no bloqueante.
-En ambos ejemplos, el servidor es capaz de manejar múltiples conexiones de cliente simultáneamente de forma eficiente y no bloqueante utilizando
+* El servidor crea un socket y lo configura en modo no bloqueante.
+* El servidor configura io_uring utilizando la llamada al sistema io_uring_setup, lo que crea una cola de envío y una cola de finalización.
+* El servidor registra el descriptor de archivo del socket en io_uring.
+* El servidor envía operaciones de E/S a la cola de envío utilizando io_uring_prep y io_uring_submit. Por ejemplo, puede enviar una operación de aceptación para aceptar nuevas conexiones de cliente.
+* El servidor utiliza io_uring_wait_cqe para esperar la finalización de las operaciones de E/S en la cola de finalización.
+* Cuando se completa una operación de E/S, como aceptar una nueva conexión de cliente, el servidor procesa el resultado y envía más operaciones de E/S según sea necesario, por ejemplo, leer y escribir datos en las conexiones de cliente.
+*El servidor sigue utilizando io_uring_wait_cqe para monitorear la finalización de las operaciones de E/S y procesar las conexiones de los clientes de forma no bloqueante.
+* En ambos ejemplos, el servidor es capaz de manejar múltiples conexiones de cliente simultáneamente de forma eficiente y no bloqueante utilizando
