@@ -49,7 +49,7 @@ Ahora, hagamos un esquema para cada estructura de control:
 
 Secuencial:
 
-```mermaid
+```
     A[Inicio] --> B[Instrucción 1]
     B --> C[Instrucción 2]
     C --> D[Instrucción 3]
@@ -59,7 +59,7 @@ En este esquema, las instrucciones se ejecutan en secuencia desde el inicio hast
 
 Selección (if-else):
 
-```mermaid
+```
     A[Inicio] --> B{Condición}
     B -- Si --> C[Instrucción 1]
     B -- No --> D[Instrucción 2]
@@ -70,13 +70,14 @@ En este esquema, si la condición es verdadera, se ejecuta la Instrucción 1. Si
 
 Repetición (while):
 
-```mermaid
+```
     A[Inicio] --> B{Condición}
     B -- Si --> C[Instrucción]
     C --> B
     B -- No --> D[Fin]
 ```
 En este esquema, mientras la condición sea verdadera, se ejecuta la instrucción y se vuelve a comprobar la condición. Cuando la condición es falsa, se termina el ciclo.
+
 # Funciones y procedimientos
 
 En la programación, los términos "función" y "procedimiento" se utilizan a veces de manera intercambiable, pero técnicamente tienen diferencias importantes. Ambos son subrutinas, es decir, bloques de código que pueden ser llamados desde diferentes lugares en un programa. Sin embargo, difieren principalmente en si devuelven o no un valor.
