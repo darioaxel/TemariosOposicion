@@ -39,11 +39,11 @@ c. Repetición: Se utiliza para ejecutar un bloque de código varias veces, depe
 # Estructuras básicas
 utilizando principalmente tres estructuras de control: secuencial, selección y repetición.
 
-- **Secuencial: **Es la más básica y natural. Las instrucciones se ejecutan una tras otra en el orden en que aparecen en el programa.
+- **Secuencial:** Es la más básica y natural. Las instrucciones se ejecutan una tras otra en el orden en que aparecen en el programa.
 
 - **Selección:** Las instrucciones se ejecutan según alguna condición. Incluye la estructura if-else y switch-case.
 
-- **Repetición: **Las instrucciones se repiten mientras se cumpla alguna condición. Incluye las estructuras for, while, y do-while.
+- **Repetición:** Las instrucciones se repiten mientras se cumpla alguna condición. Incluye las estructuras for, while, y do-while.
 
 Ahora, hagamos un esquema para cada estructura de control:
 
