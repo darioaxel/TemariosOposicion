@@ -47,17 +47,18 @@ utilizando principalmente tres estructuras de control: secuencial, selección y 
 
 Ahora, hagamos un esquema para cada estructura de control:
 
-Secuencial:
+**Secuencial:**
 
 ```
     A[Inicio] --> B[Instrucción 1]
     B --> C[Instrucción 2]
     C --> D[Instrucción 3]
     D --> E[Fin]
-    ```
+```
+
 En este esquema, las instrucciones se ejecutan en secuencia desde el inicio hasta el final.
 
-Selección (if-else):
+**Selección (if-else):**
 
 ```
     A[Inicio] --> B{Condición}
@@ -66,9 +67,10 @@ Selección (if-else):
     C --> E[Fin]
     D --> E
 ```
+
 En este esquema, si la condición es verdadera, se ejecuta la Instrucción 1. Si la condición es falsa, se ejecuta la Instrucción 2.
 
-Repetición (while):
+**Repetición (while):**
 
 ```
     A[Inicio] --> B{Condición}
