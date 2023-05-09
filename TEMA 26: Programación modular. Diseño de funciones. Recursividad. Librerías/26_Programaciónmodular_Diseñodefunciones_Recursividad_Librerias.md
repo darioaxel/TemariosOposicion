@@ -48,7 +48,76 @@ funcion factorial(n):
 ```
 
 En este caso, el caso base es cuando n es igual a cero, momento en el que se devuelve 1. El caso recursivo es n * factorial(n-1), donde se llama a la función factorial con un valor ligeramente menor en cada llamada hasta que se alcanza el caso base.
+## Tipos de funciones recursivas
 
+Existen varios tipos de funciones recursivas, entre ellas:
+
+Recursión lineal: en este tipo de recursión, la función se llama a sí misma solo una vez en cada llamada. Por lo tanto, la función se llama "lineal". Un ejemplo de una función recursiva lineal podría ser:
+```pseudocode
+funcion suma(n):
+  si n == 0:
+    devuelve 0
+  sino:
+    devuelve n + suma(n-1)
+    ```  
+
+En este caso, la función suma se llama a sí misma solo una vez en cada llamada, lo que la hace una función recursiva lineal.
+
+Recursión de cola: este tipo de recursión ocurre cuando la llamada recursiva es la última operación en la función. En otras palabras, no hay operaciones adicionales que se realicen después de la llamada recursiva. Esto se llama recursión de cola porque las llamadas recursivas se alinean en una cola. Un ejemplo de una función recursiva de cola podría ser:
+```pseudocode
+funcion factorial(n, acumulador=1):
+  si n == 0:
+    devuelve acumulador
+  sino:
+    devuelve factorial(n-1, acumulador*n)
+```
+En este caso, la llamada recursiva se realiza como la última operación en la función y se utiliza un parámetro adicional acumulador para realizar la multiplicación acumulativa. Esta es una función recursiva de cola.
+
+Recursión múltiple: en este tipo de recursión, la función se llama a sí misma varias veces en cada llamada. Por lo tanto, la función se llama "múltiple". Un ejemplo de una función recursiva múltiple podría ser:
+```pseudocode
+funcion fibonacci(n):
+  si n == 0:
+    devuelve 0
+  sino si n == 1:
+    devuelve 1
+  sino:
+    devuelve fibonacci(n-1) + fibonacci(n-2)
+```
+
+En este caso, la función fibonacci se llama a sí misma dos veces en cada llamada (una para n-1 y otra para n-2), lo que la hace una función recursiva múltiple.
+
+# Librería
+
+
+En programación y desarrollo de aplicaciones, una librería (también conocida como biblioteca) es un conjunto de funciones, clases y/o módulos preescritos que pueden ser utilizados por otros programas o aplicaciones para realizar tareas específicas. Las librerías están diseñadas para facilitar el desarrollo de software al proporcionar una funcionalidad comúnmente necesaria sin que el programador tenga que escribir todo el código desde cero.
+
+Las librerías pueden ser específicas de un lenguaje de programación o de un entorno de desarrollo en particular. Por ejemplo, una librería para Python puede contener funciones para trabajar con matemáticas, procesamiento de texto o gráficos, mientras que una librería para Java puede proporcionar clases para interactuar con bases de datos o realizar operaciones de red.
+
+Al utilizar una librería, el programador no tiene que preocuparse por implementar algoritmos complejos o lidiar con la complejidad técnica detrás de una tarea determinada. En cambio, pueden simplemente llamar a las funciones proporcionadas por la librería y utilizarlas como una "caja negra" para realizar la tarea deseada. Esto ahorra tiempo y reduce la posibilidad de errores.
+
+## Características de las librerías:
+
+**Reusabilidad**: Las librerías están diseñadas para ser reutilizadas en múltiples aplicaciones. Esto puede ahorrar mucho tiempo y esfuerzo a los desarrolladores, ya que no tienen que escribir y probar el mismo código una y otra vez.
+
+**Modularidad**: Las librerías suelen estar organizadas de manera modular, lo que significa que se dividen en piezas que realizan tareas específicas. Esto hace que sean más fáciles de entender y usar.
+
+**Independencia de la plataforma**: Algunas librerías están diseñadas para ser independientes de la plataforma, lo que significa que se pueden usar en diferentes sistemas operativos o entornos de hardware.
+
+**Eficiencia**: Las librerías a menudo contienen código que ha sido optimizado para realizar tareas específicas de manera eficiente.
+
+## Tipos de librerías:
+
+**Librerías estáticas**: Son archivos que se vinculan a un programa durante el proceso de compilación. Los archivos binarios de la librería se incluyen directamente en el ejecutable final del programa.
+
+**Librerías dinámicas**: Son archivos que se vinculan a un programa en tiempo de ejecución. Esto significa que los binarios de la librería no están incluidos en el ejecutable final, sino que se cargan desde la librería mientras el programa se está ejecutando.
+
+## Estructura de las librerías:
+
+La estructura exacta de una librería puede variar dependiendo del lenguaje de programación y el sistema operativo. Sin embargo, en términos generales, una librería se compone de una serie de módulos o componentes que realizan tareas específicas. Cada módulo puede contener una o más funciones, clases, o variables que pueden ser utilizadas por otros programas.
+
+Las librerías pueden ser tan simples como una colección de funciones relacionadas, o tan complejas como un marco de trabajo completo con su propia arquitectura y API (interfaz de programación de aplicaciones).
+
+Los detalles de cómo se utilizan las librerías en un lenguaje de programación específico suelen estar cubiertos en la documentación oficial del lenguaje o en libros de texto sobre ese lenguaje. Por ejemplo, "The C Programming Language" (Kernighan y Ritchie, 1988) cubre el uso de librerías en C, y "Java: The Complete Reference" (Schildt, 2018) cubre las librerías en Java.
 
 # Bibliografía
 
