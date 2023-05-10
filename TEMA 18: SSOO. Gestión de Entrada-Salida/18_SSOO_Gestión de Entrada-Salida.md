@@ -65,7 +65,7 @@ A continuación, se presenta un ejemplo del uso de E/S asincrónica y multiplexa
 
 El siguiente diagrama ilustra cómo funciona la multiplexación de E/S utilizando epoll en un servidor:
 
-ˋˋˋmermaid
+```mermaid
 graph TD
 A[Aplicación Servidor] --> B[Creación epoll]
 B --> C[Registro de eventos de E/S]
@@ -73,7 +73,7 @@ D[Conexiones de Cliente] --> C
 C --> E[Espera de eventos de E/S]
 E --> F[Procesamiento de eventos]
 F --> G[Respuesta a los clientes]
-ˋˋˋ
+```
 Pasos para implementar un servidor utilizando E/S asincrónica y multiplexación de E/S con epoll:
 
 La aplicación del servidor crea una instancia de epoll utilizando la llamada al sistema epoll_create.
