@@ -152,8 +152,82 @@ El beneficio de este enfoque es que permite una portabilidad similar a la de los
 
 *Ejemplos:* Java, C#, Kotlin.
 
+## Clasificación en función de los paradigmas de programación
+Los lenguajes de programación también pueden ser clasificados según el paradigma de programación que utilizan. Los paradigmas de programación son formas de clasificar los lenguajes de programación según sus características. Los cuatro paradigmas más comunes son: imperativo, declarativo, orientado a objetos y funcional.
 
+**Lenguajes de Programación Imperativos:**
 
+Los lenguajes imperativos son aquellos en los que los programas son una serie de comandos para la computadora. Estos comandos cambian el estado de la computadora de una forma que se puede seguir paso a paso.
+
+*Características:*
+
+1. Los programas están formados por una secuencia de comandos o instrucciones.
+2. Los programas cambian el estado de la computadora a medida que se ejecutan las instrucciones.
+3. Son excelentes para tareas que requieren un control detallado del hardware de la computadora.
+
+*Ejemplos:* C, Pascal, Fortran.
+
+**Lenguajes de Programación Declarativos:**
+
+Los lenguajes declarativos son aquellos en los que los programas describen el resultado deseado, pero no necesariamente cómo lograrlo. Estos lenguajes son buenos para resolver problemas complejos que requieren una gran cantidad de datos.
+
+*Características:*
+
+1. Los programas describen el resultado deseado, no cómo alcanzarlo.
+2. Son útiles para tareas de procesamiento de datos y problemas que requieren un alto nivel de abstracción.
+3. Los programas no cambian el estado de la computadora.
+
+*Ejemplos:* SQL, Prolog, HTML.
+
+**Lenguajes de Programación Orientados a Objetos:**
+
+Los lenguajes orientados a objetos son aquellos en los que los programas están formados por objetos, que son instancias de clases, que encapsulan datos y métodos.
+
+*Características:*
+
+1. Los programas están formados por objetos.
+2. Los objetos son instancias de clases que encapsulan datos y métodos.
+3. Promueven la reutilización de código a través de la herencia y la composición.
+
+*Ejemplos:* Java, C++, Python, Ruby.
+
+**Lenguajes de Programación Funcionales:**
+
+Los lenguajes funcionales son aquellos en los que los programas se componen de funciones. Estos lenguajes evitan cambiar el estado y los datos mutables.
+
+*Características:*
+
+1. Los programas están formados por funciones.
+2. Evitan cambiar el estado y los datos mutables.
+3. Son excelentes para tareas que requieren un alto grado de abstracción y para problemas que pueden ser resueltos con una serie de transformaciones de datos.
+
+*Ejemplos:* Lisp, Haskell, Erlang, Scala.
+
+**Similitudes y Diferencias:**
+
+Todos los lenguajes de programación se utilizan para escribir software y pueden ser usados para crear programas complejos. Sin embargo, los diferentes paradigmas de programación enfatizan diferentes formas de pensar sobre los problemas y de organizar y estructurar el código para resolverlos.
+
+Además de estos cuatro, existen otros paradigmas de programación como la programación lógica (Prolog), programación concurrente (Erlang), programación orientada a aspectos (AspectJ), entre otros.
+
+## Características y cualidades
+
+Los lenguajes de programación son herramientas que permiten a los desarrolladores crear software. Para ser efectivos, estos lenguajes deben poseer ciertas características o cualidades. Aquí te menciono algunas de las más importantes:
+
+1. **Legibilidad y Claridad:** Un buen lenguaje de programación debe ser fácil de leer y entender. Esto no solo facilita el aprendizaje del lenguaje, sino que también hace más sencillo el mantenimiento y la revisión del código en el futuro.
+
+2. **Eficiencia:** Los lenguajes de programación deben permitir la creación de software que se ejecute de manera eficiente. Esto implica tanto la velocidad de ejecución como el uso eficiente de los recursos del sistema, como la memoria y el procesador.
+
+3. **Portabilidad:** La portabilidad se refiere a la capacidad de un programa para ser ejecutado en diferentes plataformas sin necesidad de cambios significativos. Un lenguaje de programación con alta portabilidad permitirá que el código escrito en él se ejecute en una variedad de sistemas operativos y arquitecturas de hardware.
+
+4. **Expresividad:** Un lenguaje de programación debe ser expresivo, es decir, debe permitir a los programadores expresar sus ideas de manera clara y concisa. Un lenguaje de programación expresivo puede hacer que el código sea más legible y fácil de mantener.
+
+5. **Uniformidad y Consistencia:** Los buenos lenguajes de programación suelen tener reglas y estructuras consistentes, lo que facilita su aprendizaje y uso. Además, esto puede reducir la probabilidad de errores.
+
+6. **Robustez y Seguridad:** Un lenguaje de programación debe ser robusto y proporcionar mecanismos para manejar errores y excepciones. Además, debe proporcionar características que ayuden a prevenir problemas de seguridad, como el desbordamiento de búfer o la inyección de código.
+
+7. **Soporte y Comunidad:** Un buen lenguaje de programación a menudo tiene un fuerte soporte y una comunidad activa. Esto puede incluir documentación extensa, una gran cantidad de bibliotecas y marcos de trabajo, y una comunidad de desarrolladores que pueden proporcionar asistencia y soporte.
+
+Cabe destacar que no todos los lenguajes de programación necesitan todas estas características en la misma medida. Dependiendo de la aplicación específica, algunas características pueden ser más importantes que otras. Por ejemplo, para el desarrollo de sistemas embebidos, la eficiencia y el control a bajo nivel pueden ser más importantes que la facilidad de uso o la legibilidad.
 # Bibliografía
 
 > Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Pearson/Addison Wesley.
