@@ -1,5 +1,8 @@
 # TEMA 24: Lenguajes de programación. Tipos. Características
-### 1.1. Historia de los lenguajes de programación
+## 1.1. Definición
+"Un lenguaje de programación es un sistema notacional para describir computaciones en una forma legible para el ser humano y que sea procesable por una máquina. Los lenguajes de programación son utilizados para facilitar la comunicación acerca de la tarea de organizar y manipular información y para expresar algoritmos de forma precisa" (Sebesta, R.W. Concepts of Programming Languages. 11th ed., Pearson, 2016).  
+
+## 1.2. Historia de los lenguajes de programación
 Las generaciones de lenguajes de programación se refieren a la evolución de estos lenguajes a lo largo del tiempo, clasificándose generalmente en cinco categorías principales. Cada generación presenta características distintivas y avances en comparación con las generaciones anteriores.
 
 **Primera generación: Lenguajes de máquina**
@@ -105,9 +108,49 @@ Abstracción:** La abstracción es la capacidad de simplificar problemas complej
 
 **Capacidad de depuración y mantenimiento:** Un buen lenguaje de programación debe facilitar la depuración y el mantenimiento del código a lo largo del tiempo. Esto incluye la capacidad de identificar y corregir errores, así como de realizar modificaciones y mejoras en el código existente (McConnell, 2004).
 
-**Integración con otras tecnologías y herramientas: **Un lenguaje de programación debe ser compatible con otras tecnologías y herramientas para permitir a los desarrolladores aprovechar bibliotecas existentes, frameworks y sistemas de desarrollo (Gamma et al., 1994).
+**Integración con otras tecnologías y herramientas:** Un lenguaje de programación debe ser compatible con otras tecnologías y herramientas para permitir a los desarrolladores aprovechar bibliotecas existentes, frameworks y sistemas de desarrollo (Gamma et al., 1994).
 
+## Clasificacion de los lenguajes de programación
 
+Los lenguajes de programación pueden ser clasificados como compilados o interpretados. Esta clasificación se basa en cómo se ejecuta el código escrito en estos lenguajes.
+
+**Lenguajes Compilados:**
+
+Los lenguajes compilados son aquellos en los que el código fuente es traducido directamente en código máquina por un compilador antes de que sea ejecutado. Este código máquina es específico para la arquitectura del sistema y no puede ser ejecutado en diferentes tipos de sistemas sin ser recompilado.
+
+*Características:*
+
+1. Son generalmente más rápidos en la ejecución porque el código ya ha sido traducido a código máquina antes de la ejecución.
+2. Una vez compilado, el código no necesita del compilador para ser ejecutado.
+3. El código compilado es específico para la arquitectura del sistema.
+
+*Ejemplos:* C, C++, Swift, Go, Rust.
+
+**Lenguajes Interpretados:**
+
+Los lenguajes interpretados son aquellos en los que el código fuente es leído y ejecutado línea por línea por un intérprete en tiempo de ejecución. Esto significa que el código no se traduce a código máquina antes de su ejecución.
+
+*Características:*
+
+1. Son generalmente más lentos que los lenguajes compilados porque el intérprete tiene que traducir el código a código máquina en tiempo real.
+2. El código puede ser ejecutado en cualquier sistema que tenga un intérprete para ese lenguaje, lo que los hace más portables.
+3. El código necesita del intérprete para ser ejecutado.
+
+*Ejemplos:* Python, Ruby, JavaScript, PHP, Perl.
+
+**Similitudes y Diferencias:**
+
+Tanto los lenguajes compilados como los interpretados son utilizados para escribir software y ambos pueden ser usados para crear programas complejos. La principal diferencia entre ellos es cómo y cuándo se traduce el código a código máquina.
+
+**Otros tipos de lenguajes:**
+
+Además de los lenguajes compilados e interpretados, existe otro tipo de lenguaje conocido como lenguaje de programación de nivel intermedio o lenguajes de bytecode.
+
+Estos lenguajes son una especie de híbrido entre los dos anteriores. El código fuente se compila a un código de bytes (bytecode), que es una versión intermedia del código que no es específica de la máquina. Este bytecode luego se interpreta o se compila en tiempo de ejecución (Just-In-Time compilation, JIT) para ser ejecutado.
+
+El beneficio de este enfoque es que permite una portabilidad similar a la de los lenguajes interpretados, pero con un rendimiento que puede acercarse al de los lenguajes compilados.
+
+*Ejemplos:* Java, C#, Kotlin.
 
 
 
