@@ -1,4 +1,6 @@
 # Tema 19. Gestión de archivos y dispositivos
+# 1. Introducción
+# 2. Definiciones
 
 "Operating System Concepts" de Abraham Silberschatz, Peter B. Galvin y Greg Gagne:
 **Fichero (archivo):** Un archivo es una colección de información relacionada almacenada en el almacenamiento secundario de un sistema de computación, como un disco duro o una unidad de estado sólido. Los archivos pueden contener datos, programas o ambos, y son identificados por un nombre único en el sistema de archivos.
