@@ -110,7 +110,7 @@ En este ejemplo, la combinación de E/S basada en eventos y almacenamiento en ca
 
 ## epoll y io_uring
 
-Tanto epoll como io_uring son mecanismos de E/S asincrónica en Linux que permiten a las aplicaciones manejar múltiples operaciones de E/S de forma eficiente y no bloqueante. A continuación, se presentan ejemplos de cómo funcionan epoll e io_uring en un servidor que atiende múltiples conexiones de cliente simultáneamente.
+Tanto epoll como io_uring son mecanismos de E/S asincrónica en Linux que permiten a las aplicaciones manejar múltiples operaciones de E/S de forma eficiente y no bloqueante. A continuación, se presentan ejemplos de cómo funcionan **epoll** e **io_uring** en un servidor que atiende múltiples conexiones de cliente simultáneamente.
 
 #### 1. epoll
 
@@ -118,23 +118,24 @@ Epoll es un mecanismo de E/S asincrónica y multiplexada que se introdujo en Lin
 
 Supongamos que tenemos un servidor TCP que maneja múltiples conexiones de cliente simultáneamente utilizando epoll. Los pasos a seguir son:
 
-El servidor crea un socket y lo configura en modo no bloqueante.
-El servidor crea una instancia de epoll utilizando la llamada al sistema epoll_create.
-El servidor registra eventos de E/S de interés (por ejemplo, eventos de lectura) para el descriptor de archivo del socket utilizando epoll_ctl.
-El servidor utiliza epoll_wait para esperar eventos de E/S en el socket y en las conexiones de cliente.
-Cuando se produce un evento de E/S, como una nueva conexión de cliente, el servidor acepta la conexión y registra eventos de E/S para el nuevo descriptor de archivo utilizando epoll_ctl.
-El servidor sigue utilizando epoll_wait para monitorear los eventos de E/S y procesar las conexiones de los clientes de forma no bloqueante.
+1. El servidor crea un socket y lo configura en modo no bloqueante.
+2. El servidor crea una instancia de epoll utilizando la llamada al sistema epoll_create.
+3. El servidor registra eventos de E/S de interés (por ejemplo, eventos de lectura) para el descriptor de archivo del socket utilizando epoll_ctl.
+4. El servidor utiliza epoll_wait para esperar eventos de E/S en el socket y en las conexiones de cliente.
+5. Cuando se produce un evento de E/S, como una nueva conexión de cliente, el servidor acepta la conexión y 
+6. Registra eventos de E/S para el nuevo descriptor de archivo utilizando epoll_ctl.
+7. El servidor sigue utilizando epoll_wait para monitorear los eventos de E/S y procesar las conexiones de los clientes de forma no bloqueante.
 
 #### 2. io_uring
 
-Io_uring es un mecanismo de E/S asincrónica y no bloqueante más reciente y avanzado en Linux, introducido en el kernel 5.1. A diferencia de epoll, io_uring utiliza colas de envío y finalización para manejar operaciones de E/S, lo que permite un mejor rendimiento y una interfaz más fácil de usar.
+**Io_uring **es un mecanismo de E/S asincrónica y no bloqueante más reciente y avanzado en Linux, introducido en el kernel 5.1. A diferencia de epoll, io_uring utiliza colas de envío y finalización para manejar operaciones de E/S, lo que permite un mejor rendimiento y una interfaz más fácil de usar.
 
 Supongamos que tenemos un servidor TCP que maneja múltiples conexiones de cliente simultáneamente utilizando io_uring. Los pasos a seguir son:
-* El servidor crea un socket y lo configura en modo no bloqueante.
-* El servidor configura io_uring utilizando la llamada al sistema io_uring_setup, lo que crea una cola de envío y una cola de finalización.
-* El servidor registra el descriptor de archivo del socket en io_uring.
-* El servidor envía operaciones de E/S a la cola de envío utilizando io_uring_prep y io_uring_submit. Por ejemplo, puede enviar una operación de aceptación para aceptar nuevas conexiones de cliente.
-* El servidor utiliza io_uring_wait_cqe para esperar la finalización de las operaciones de E/S en la cola de finalización.
-* Cuando se completa una operación de E/S, como aceptar una nueva conexión de cliente, el servidor procesa el resultado y envía más operaciones de E/S según sea necesario, por ejemplo, leer y escribir datos en las conexiones de cliente.
-*El servidor sigue utilizando io_uring_wait_cqe para monitorear la finalización de las operaciones de E/S y procesar las conexiones de los clientes de forma no bloqueante.
-* En ambos ejemplos, el servidor es capaz de manejar múltiples conexiones de cliente simultáneamente de forma eficiente y no bloqueante utilizando
+1. El servidor crea un socket y lo configura en modo no bloqueante.
+2. El servidor configura io_uring utilizando la llamada al sistema io_uring_setup, lo que crea una cola de envío y una cola de finalización.
+3. El servidor registra el descriptor de archivo del socket en io_uring.
+4. El servidor envía operaciones de E/S a la cola de envío utilizando io_uring_prep y io_uring_submit. Por ejemplo, puede enviar una operación de aceptación para aceptar nuevas conexiones de cliente.
+5. El servidor utiliza io_uring_wait_cqe para esperar la finalización de las operaciones de E/S en la cola de finalización.
+6. Cuando se completa una operación de E/S, como aceptar una nueva conexión de cliente, el servidor procesa el resultado y envía más operaciones de E/S según sea necesario, por ejemplo, leer y escribir datos en las conexiones de cliente.
+7. El servidor sigue utilizando io_uring_wait_cqe para monitorear la finalización de las operaciones de E/S y procesar las conexiones de los clientes de forma no bloqueante.
+8. En ambos ejemplos, el servidor es capaz de manejar múltiples conexiones de cliente simultáneamente de forma eficiente y no bloqueante utilizando
