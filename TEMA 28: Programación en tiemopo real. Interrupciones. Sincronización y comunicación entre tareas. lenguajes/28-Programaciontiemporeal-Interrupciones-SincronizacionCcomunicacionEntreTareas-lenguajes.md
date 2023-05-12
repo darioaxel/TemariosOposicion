@@ -18,13 +18,17 @@
     - [3.1. Concepto de interrupción. Interrupciones múltiples](#31-concepto-de-interrupción-interrupciones-múltiples)
     - [3.2. Tratamiento de interrupciones](#32-tratamiento-de-interrupciones)
   - [4. Sincronización y comunicación de tareas](#4-sincronización-y-comunicación-de-tareas)
-    - [4.1. Semáforos](#41-semáforos)
-    - [4.2. Memoria compartida](#42-memoria-compartida)
-    - [4.3. Intercambio de mensajes](#43-intercambio-de-mensajes)
-    - [4.4. Buzones y puertos](#44-buzones-y-puertos)
-    - [4.5. Pipes](#45-pipes)
-    - [4.6. Llamadas a procedimientos remotos](#46-llamadas-a-procedimientos-remotos)
-      - [4.7 Bases de datos de tiempo real](#47-bases-de-datos-de-tiempo-real)
+  - [4. Sincronización y comunicación de tareas](#4-sincronización-y-comunicación-de-tareas-1)
+    - [4.1. Técnicas de sincronización](#41-técnicas-de-sincronización)
+      - [4.1.1. Semáforos](#411-semáforos)
+      - [4.1.2. Monitores](#412-monitores)
+      - [4.1.3. Condiciones de carrera y exclusión mutua](#413-condiciones-de-carrera-y-exclusión-mutua)
+      - [4.1.4. Variables de condición](#414-variables-de-condición)
+    - [4.2. Técnicas de comunicación](#42-técnicas-de-comunicación)
+      - [4.2.1. Memoria compartida](#421-memoria-compartida)
+      - [4.2.2. Intercambio de mensajes](#422-intercambio-de-mensajes)
+      - [4.2.3. Buzones y puertos](#423-buzones-y-puertos)
+      - [4.2.4. Pipes](#424-pipes)
   - [5. Lenguajes de programación en tiempo real](#5-lenguajes-de-programación-en-tiempo-real)
     - [5.1. ADA](#51-ada)
     - [5.2. Java](#52-java)
@@ -116,7 +120,15 @@ Para ilustrar este proceso, considere un sistema de control de tráfico aéreo. 
 
 La sincronización y comunicación de tareas es un aspecto fundamental en los sistemas de tiempo real, especialmente en aquellos que son multiproceso o multihilo. Estas técnicas permiten coordinar la ejecución de varias tareas para que trabajen de manera cooperativa y efectiva (Laplante, 2017).
 
-### 4.1. Semáforos
+## 4. Sincronización y comunicación de tareas
+
+La sincronización y comunicación de tareas es un aspecto fundamental en los sistemas de tiempo real, especialmente en aquellos que son multiproceso o multihilo. Estas técnicas permiten coordinar la ejecución de varias tareas para que trabajen de manera cooperativa y efectiva (Laplante, 2017).
+
+### 4.1. Técnicas de sincronización
+
+Las técnicas de sincronización se utilizan para coordinar la ejecución de tareas concurrentes y garantizar que accedan de manera adecuada y segura a los recursos compartidos.
+
+#### 4.1.1. Semáforos
 
 Los semáforos son una técnica comúnmente utilizada para la sincronización en sistemas de tiempo real. Un semáforo es una variable que se utiliza para controlar el acceso a un recurso compartido. Por ejemplo, si varias tareas necesitan acceder a un dispositivo de hardware, un semáforo puede utilizarse para asegurar que solo una tarea tenga acceso a la vez.
 
@@ -133,7 +145,62 @@ V(s): // Exit section
   s = s + 1 // Release resource
 ```
 
-### 4.2. Memoria compartida
+#### 4.1.2. Monitores
+
+Un monitor es un constructo de programación que permite a múltiples hilos manipular un recurso compartido, pero garantiza que solo un hilo pueda acceder al recurso a la vez. Los monitores incluyen un bloqueo (o bloqueos) para evitar el acceso concurrente y pueden incluir variables de condición para controlar cuándo un hilo puede acceder al recurso (Burns & Wellings, 2019).
+
+```pseudo
+Monitor monitor // Initialize monitor
+
+monitor.lock() // Acquire lock
+
+// Critical section: Access shared resource
+
+monitor.unlock() // Release lock
+```
+
+En un monitor, todas las operaciones que modifican los datos compartidos se encapsulan dentro del monitor, lo que proporciona un mecanismo seguro para el manejo de la concurrencia. Los monitores son una herramienta esencial para la programación de sistemas de tiempo real y pueden ser implementados en varios lenguajes de programación, incluyendo ADA y Java (Buttazzo, 2011).
+
+Además de los semáforos y los monitores, hay varias técnicas de sincronización importantes que son esenciales para los sistemas de tiempo real. Aquí hay dos técnicas adicionales que podrían ser incluidas:
+
+#### 4.1.3. Condiciones de carrera y exclusión mutua
+
+La exclusión mutua es un principio fundamental para la sincronización en los sistemas de tiempo real. La exclusión mutua se refiere a la idea de que solo una tarea (o hilo) debe tener acceso a un recurso compartido a la vez. Sin exclusión mutua, pueden surgir condiciones de carrera, donde los resultados dependen de la secuencia o el tiempo de los eventos (Buttazzo, 2011).
+
+```pseudo
+Mutex m // Initialize mutex
+
+m.lock() // Acquire lock
+
+// Critical section: Access shared resource
+
+m.unlock() // Release lock
+```
+
+#### 4.1.4. Variables de condición
+
+Las variables de condición son una técnica de sincronización que permite a una tarea esperar hasta que una determinada condición sea verdadera. Las variables de condición se utilizan a menudo junto con los mutex para permitir a las tareas esperar de forma segura y eficiente (Burns & Wellings, 2019).
+
+```pseudo
+Mutex m // Initialize mutex
+Condition c // Initialize condition
+
+m.lock() // Acquire lock
+
+while (!condition) { // Wait for condition
+  c.wait(m) 
+}
+
+// Continue with task
+
+m.unlock() // Release lock
+```
+
+### 4.2. Técnicas de comunicación
+
+Las técnicas de comunicación se utilizan para permitir que las tareas compartan información entre sí de manera eficiente y segura.
+
+#### 4.2.1. Memoria compartida
 
 La memoria compartida es un método de comunicación entre tareas en un sistema de tiempo real. En este modelo, varias tareas pueden acceder a una región común de memoria para leer y escribir datos.
 
@@ -147,7 +214,7 @@ Task2:
   data = memory.read() // Read data from shared memory
 ```
 
-### 4.3. Intercambio de mensajes
+#### 4.2.2. Intercambio de mensajes
 
 El intercambio de mensajes es otra técnica de comunicación en sistemas de tiempo real. En este modelo, las tareas comunican enviando y recibiendo mensajes.
 
@@ -159,7 +226,7 @@ Task2:
   message = receive(Task1) // Receive message from Task1
 ```
 
-### 4.4. Buzones y puertos
+#### 4.2.3. Buzones y puertos
 
 Los buzones y puertos son abstracciones que se utilizan para el intercambio de mensajes en algunos sistemas de tiempo real. Un buzón es una cola de mensajes que puede ser leída por una o más tareas. Un puerto es similar, pero puede ser utilizado para enviar y recibir mensajes entre diferentes sistemas.
 
@@ -173,7 +240,7 @@ Task2:
   message = mailbox.fetch() // Fetch message from mailbox
 ```
 
-### 4.5. Pipes
+#### 4.2.4. Pipes
 
 Un pipe es una técnica que permite la comunicación entre dos tareas a través de un canal de lectura y escritura. Los datos escritos en el extremo de escritura del pipe pueden ser leídos desde el extremo de lectura.
 
@@ -186,34 +253,6 @@ Task1:
 Task2:
   data = pipe.read() // Read data from pipe
 ```
-
-### 4.6. Llamadas a procedimientos remotos
-
-Las llamadas a procedimientos remotos permiten que una tarea en un sistema invoque un procedimiento en otro sistema. Esta es una forma potente de comunicación y sincronización en sistemas de tiempo real distribuidos.
-
-```pseudo
-Task1:
-  result = remoteProcedureCall(Task2, procedure, args) // Call remote procedure
-
-Task2:
-  procedure(args) // Execute procedure
-```
-
-#### 4.7 Bases de datos de tiempo real
-
-Las bases de datos de tiempo real son un medio especializado de comunicación y sincronización. Estas bases de datos pueden garantizar que las operaciones de lectura y escritura se completen dentro de plazos de tiempo específicos, lo que es crucial en muchos sistemas de tiempo real.
-
-```pseudo
-RealTimeDatabase db // Initialize real-time database
-
-Task1:
-  db.write(key, data, deadline) // Write data to database with a deadline
-
-Task2:
-  data = db.read(key, deadline) // Read data from database with a deadline
-```
-
-En todos estos casos, es crucial que el sistema de tiempo real pueda garantizar que las operaciones de sincronización y comunicación se completen dentro de los plazos requeridos. Los mecanismos de sincronización y comunicación deben ser diseñados e implementados cuidadosamente para evitar problemas como la inanición (cuando una tarea no puede progresar porque nunca obtiene acceso a un recurso) o la interbloqueo (cuando dos o más tareas se bloquean mutuamente porque cada una está esperando un recurso que la otra tiene) (Burns & Wellings, 2019).
 
 ## 5. Lenguajes de programación en tiempo real
 
