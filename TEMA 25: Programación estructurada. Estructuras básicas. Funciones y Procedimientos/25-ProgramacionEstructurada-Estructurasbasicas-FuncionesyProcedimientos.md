@@ -23,12 +23,11 @@ Los fundamentos de la programación estructurada se basan en las siguientes idea
 **Modularidad:** La modularidad se refiere a dividir un programa en funciones o módulos más pequeños e independientes, que pueden ser desarrollados, probados y depurados por separado. Esto mejora la organización del código, la reutilización y la facilidad de mantenimiento.
 
 **Estructuras de control**: La programación estructurada utiliza tres tipos básicos de estructuras de control para gestionar el flujo de un programa: secuencial, selección y repetición.
+> a.** Secuencial:** El flujo de control se ejecuta en un orden secuencial, de arriba abajo, sin saltos ni ramificaciones.
 
-a. Secuencial: El flujo de control se ejecuta en un orden secuencial, de arriba abajo, sin saltos ni ramificaciones.
+> b. **Selección:** Se utiliza para tomar decisiones en función de ciertas condiciones, como "if", "if-else" y "switch-case".
 
-b. Selección: Se utiliza para tomar decisiones en función de ciertas condiciones, como "if", "if-else" y "switch-case".
-
-c. Repetición: Se utiliza para ejecutar un bloque de código varias veces, dependiendo de una condición. Incluye estructuras como "for", "while" y "do-while".
+> c. **Repetición: **Se utiliza para ejecutar un bloque de código varias veces, dependiendo de una condición. Incluye estructuras como "for", "while" y "do-while".
 
 **Variables y tipos de datos:** La programación estructurada requiere el uso de variables y tipos de datos para almacenar y manipular información en un programa. Las variables tienen un tipo de dato asociado que define el tipo de información que pueden almacenar (enteros, flotantes, caracteres, etc.).
 
