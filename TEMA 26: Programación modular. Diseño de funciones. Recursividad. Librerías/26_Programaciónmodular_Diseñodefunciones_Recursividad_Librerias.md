@@ -24,7 +24,7 @@
   - [6.1. Diseño estructurado](#61-diseño-estructurado)
   - [6.2. Atributos de la calidad de un diseño](#62-atributos-de-la-calidad-de-un-diseño)
   - [7. Conclusión](#7-conclusión)
-    - [7.1. Relación del tema con la enseñanza en fp](#71-relación-del-tema-con-la-enseñanza-en-fp)
+  - [7.1. Relación del tema con la enseñanza en FP](#71-relación-del-tema-con-la-enseñanza-en-fp)
   - [8 Bibliografía](#8-bibliografía)
 
 
@@ -203,8 +203,23 @@ Los detalles de cómo se utilizan las librerías en un lenguaje de programación
 ## 6. Diseño de funciones y procedimientos
  ## 6.1. Diseño estructurado
  ## 6.2. Atributos de la calidad de un diseño
+
+
 ## 7. Conclusión
-### 7.1. Relación del tema con la enseñanza en fp
+
+La programación modular, el diseño de funciones, la recursividad y el uso de librerías son elementos fundamentales en la formación de cualquier estudiante de informática. No solo proporcionan las herramientas necesarias para abordar problemas complejos y desarrollar soluciones eficientes, sino que también fomentan una mentalidad de pensamiento lógico y estructurado que es invaluable en la industria de la tecnología.
+
+Las ventajas de la programación modular son innumerables, incluyendo la mejora de la legibilidad, la reusabilidad y la eficiencia en el código. Las funciones y los procedimientos permiten un código más ordenado y una mejor distribución de las tareas. La recursividad, aunque puede ser un concepto desafiante para los principiantes, es fundamental para resolver ciertos tipos de problemas de manera eficiente. Las librerías, por otro lado, permiten aprovechar el trabajo de otros programadores para evitar "reinventar la rueda".
+
+## 7.1. Relación del tema con la enseñanza en FP
+
+En la Formación Profesional (FP), los conceptos de programación modular, diseño de funciones, recursividad y librerías son esenciales. Los estudiantes de FP en el área de informática necesitan entender estos conceptos para poder desarrollar soluciones eficientes a problemas reales.
+
+En el aula, estos conceptos se pueden enseñar de manera teórica, pero también deben ser reforzados con ejemplos prácticos y ejercicios. Los estudiantes deben tener la oportunidad de experimentar con la creación de módulos y funciones, el uso de la recursividad y la implementación de librerías. 
+
+Además, estos conceptos no solo son relevantes para la programación. La idea de dividir un problema complejo en partes más pequeñas y manejables es una habilidad valiosa en muchas áreas de la vida. Asimismo, el uso eficiente de los recursos disponibles (en este caso, las librerías) es una lección importante para cualquier profesional.
+
+Espero que esta conclusión y relación con la enseñanza en FP sea de utilidad. Por favor, si necesitas que desarrolle más apartados del tema, estaré encantado de ayudarte.
 
 ## 8 Bibliografía
 
