@@ -1,6 +1,22 @@
 # TEMA 23: Diseño de algoritmos. Técnicas descriptivas
+> ### Bloque 3
+> ---
 
-## 1. Introducción
+- [TEMA 23: Diseño de algoritmos. Técnicas descriptivas](#tema-23-diseño-de-algoritmos-técnicas-descriptivas)
+- [1. Introducción](#1-introducción)
+- [2. Algortimos y programas](#2-algortimos-y-programas)
+  - [2.1. Algoritmo](#21-algoritmo)
+    - [2.1.1 Características de un algoritmo:](#211-características-de-un-algoritmo)
+    - [2.1.2 Elementos de un algoritmo:](#212-elementos-de-un-algoritmo)
+  - [2.2. Programa](#22-programa)
+  - [2.3. Eficiencia de un Algoritmo](#23-eficiencia-de-un-algoritmo)
+  - [2.4. Técnicas de diseño de algoritmos](#24-técnicas-de-diseño-de-algoritmos)
+- [3. Técnicas descriptivas](#3-técnicas-descriptivas)
+- [4. Conclusiones](#4-conclusiones)
+- [5. Bibliografía](#5-bibliografía)
+
+
+# 1. Introducción
 El diseño de algoritmos es una disciplina fundamental en la enseñanza de la informática, ya que representa la base de la creación y optimización de programas y aplicaciones. En el ámbito de la enseñanza secundaria y la formación profesional, es esencial transmitir a los estudiantes las técnicas descriptivas que les permitirán desarrollar soluciones eficientes y comprensibles en sus futuras carreras profesionales. 
 
 El diseño de algoritmos es una tarea esencial en la informática y, como señala Cormen et al. (2009) en su obra seminal "Introduction to Algorithms", es importante enseñar a los estudiantes cómo diseñar, analizar y optimizar algoritmos para resolver problemas complejos en un tiempo y espacio razonablemente eficientes. La técnica descriptiva es un enfoque que permite a los estudiantes comprender y comunicar algoritmos de manera clara y concisa, utilizando un lenguaje y notaciones específicas.
@@ -14,7 +30,7 @@ Los conceptos de algoritmo y programa están estrechamente relacionados pero no 
 
 Un algoritmo se puede definir como un conjunto ordenado y finito de pasos, que al ser ejecutados secuencialmente permiten resolver un problema específico (Cormen et al., 2009). Es decir, un algoritmo es una receta que describe cómo obtener una solución para un problema dada una entrada específica.
 
-### Características de un algoritmo:
+### 2.1.1 Características de un algoritmo:
 
 - **Precisión**: Los pasos de un algoritmo deben estar claramente definidos y ser inequívocos.
 - **Finitud**: Un algoritmo debe tener un número finito de pasos y finalizar en un tiempo finito.
@@ -22,7 +38,7 @@ Un algoritmo se puede definir como un conjunto ordenado y finito de pasos, que a
 - **Salida**: Un algoritmo produce una o más salidas, que son los resultados del proceso aplicado a las entradas.  
 - **Efectividad**: Los pasos de un algoritmo deben ser básicos y realizables en un tiempo razonable.  
 
-### Elementos de un algoritmo:
+### 2.1.2 Elementos de un algoritmo:
 
 - **Variables**: Almacenan información y permiten representar datos en el algoritmo.
 - **Estructuras de control**: Permiten la ejecución condicional de ciertos pasos o la repetición de un conjunto de pasos. Ejemplos de estas estructuras son: condicionales (if, else) y bucles (for, while).
@@ -90,7 +106,7 @@ Las principales técnicas de diseño de algoritmos incluyen:
 **Heurísticas**: Las heurísticas son técnicas que guían la búsqueda de soluciones en problemas complejos o cuando no se dispone de métodos exactos. Aunque las heurísticas no garantizan soluciones óptimas, pueden proporcionar soluciones aproximadas de manera más eficiente que los métodos exhaustivos. Ejemplo: algoritmo A* para la búsqueda de caminos en grafos ponderados (Cormen et al., 2009).
 
 
-# Técnicas descriptivas
+# 3. Técnicas descriptivas
 
 **Pseudocódigo**: El pseudocódigo es una representación textual de alto nivel de un algoritmo que utiliza una sintaxis similar a la de un lenguaje de programación pero es más fácil de entender y no requiere conocimientos específicos de un lenguaje. Un ejemplo de pseudocódigo para el algoritmo de búsqueda binaria es:
 ```
@@ -131,8 +147,8 @@ Función búsqueda_binaria(A, valor):
 
 
 
-
-# Referencias bibliográficas:
+# 4. Conclusiones
+# 5. Bibliografía
 
 > Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms. MIT Press.  
 

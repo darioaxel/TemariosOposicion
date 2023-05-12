@@ -10,10 +10,11 @@
     - [3.2. Clasificación por dominio de aplicación](#32-clasificación-por-dominio-de-aplicación)
   - [4. Características de los lenguajes de programación](#4-características-de-los-lenguajes-de-programación)
     - [4.1. Características en el diseño de lenguajes de programación](#41-características-en-el-diseño-de-lenguajes-de-programación)
-  - [Clasificacion de los lenguajes de programación](#clasificacion-de-los-lenguajes-de-programación)
+    - [4.2. Aspectos de la implementación](#42-aspectos-de-la-implementación)
+  - [5. Lenguajes de programación actuales y tendencias](#5-lenguajes-de-programación-actuales-y-tendencias)
+  - [6. Conclusiones](#6-conclusiones)
+  - [7. Bibliografía](#7-bibliografía)
   - [Clasificación en función de los paradigmas de programación](#clasificación-en-función-de-los-paradigmas-de-programación)
-  - [Características y cualidades](#características-y-cualidades)
-- [Bibliografía](#bibliografía)
 
 
 ## 1.1. Definición
@@ -163,9 +164,76 @@ Abstracción:** La abstracción es la capacidad de simplificar problemas complej
 
 **Integración con otras tecnologías y herramientas:** Un lenguaje de programación debe ser compatible con otras tecnologías y herramientas para permitir a los desarrolladores aprovechar bibliotecas existentes, frameworks y sistemas de desarrollo (Gamma et al., 1994).
 
-## Clasificacion de los lenguajes de programación
+
+### 4.2. Aspectos de la implementación
+
+Los lenguajes de programación son herramientas que permiten a los desarrolladores crear software. Para ser efectivos, estos lenguajes deben poseer ciertas características o cualidades. Aquí te menciono algunas de las más importantes:
+
+1. **Legibilidad y Claridad:** Un buen lenguaje de programación debe ser fácil de leer y entender. Esto no solo facilita el aprendizaje del lenguaje, sino que también hace más sencillo el mantenimiento y la revisión del código en el futuro.
+
+2. **Eficiencia:** Los lenguajes de programación deben permitir la creación de software que se ejecute de manera eficiente. Esto implica tanto la velocidad de ejecución como el uso eficiente de los recursos del sistema, como la memoria y el procesador.
+
+3. **Portabilidad:** La portabilidad se refiere a la capacidad de un programa para ser ejecutado en diferentes plataformas sin necesidad de cambios significativos. Un lenguaje de programación con alta portabilidad permitirá que el código escrito en él se ejecute en una variedad de sistemas operativos y arquitecturas de hardware.
+
+4. **Expresividad:** Un lenguaje de programación debe ser expresivo, es decir, debe permitir a los programadores expresar sus ideas de manera clara y concisa. Un lenguaje de programación expresivo puede hacer que el código sea más legible y fácil de mantener.
+
+5. **Uniformidad y Consistencia:** Los buenos lenguajes de programación suelen tener reglas y estructuras consistentes, lo que facilita su aprendizaje y uso. Además, esto puede reducir la probabilidad de errores.
+
+6. **Robustez y Seguridad:** Un lenguaje de programación debe ser robusto y proporcionar mecanismos para manejar errores y excepciones. Además, debe proporcionar características que ayuden a prevenir problemas de seguridad, como el desbordamiento de búfer o la inyección de código.
+
+7. **Soporte y Comunidad:** Un buen lenguaje de programación a menudo tiene un fuerte soporte y una comunidad activa. Esto puede incluir documentación extensa, una gran cantidad de bibliotecas y marcos de trabajo, y una comunidad de desarrolladores que pueden proporcionar asistencia y soporte.
+
+Cabe destacar que no todos los lenguajes de programación necesitan todas estas características en la misma medida. Dependiendo de la aplicación específica, algunas características pueden ser más importantes que otras. Por ejemplo, para el desarrollo de sistemas embebidos, la eficiencia y el control a bajo nivel pueden ser más importantes que la facilidad de uso o la legibilidad.
+## 5. Lenguajes de programación actuales y tendencias
+
+Para desarrollar este punto, es importante destacar que el mundo de la programación es dinámico y en constante evolución. Los lenguajes de programación surgen, cambian y caen en desuso conforme evolucionan las necesidades de la industria y la tecnología. Aquí se presentarán algunos de los lenguajes de programación más utilizados actualmente y las tendencias actuales en este campo.
+
+**Lenguajes de Programación Actuales**
+
+1. **Python:** Este lenguaje de programación de alto nivel se ha vuelto muy popular por su sintaxis clara y legible. Python es ampliamente utilizado en ciencia de datos, aprendizaje automático, desarrollo web, automatización y muchas otras áreas (Pierce, B.C., Types and Programming Languages, MIT Press, 2002).
+
+2. **JavaScript:** Originalmente desarrollado para la programación del lado del cliente en la web, JavaScript ha evolucionado y ahora también se utiliza para el desarrollo del lado del servidor (Node.js), así como para aplicaciones móviles y de escritorio. Su popularidad sigue siendo alta debido a su papel central en la web moderna (Flanagan, D., JavaScript: The Definitive Guide, O'Reilly Media, 2020).
+
+3. **Java:** Java ha sido un pilar en el mundo de la programación desde su introducción en la década de 1990. Aunque ha habido fluctuaciones en su popularidad, Java sigue siendo ampliamente utilizado en empresas para el desarrollo de aplicaciones de back-end y de Android (Arnold, K., Gosling, J., The Java Programming Language, Addison-Wesley Professional, 2005).
+
+4. **C# y .NET:** C# es un lenguaje desarrollado por Microsoft y es ampliamente utilizado en el desarrollo de aplicaciones de Windows y juegos (a través de Unity). El entorno .NET de Microsoft proporciona un marco robusto para el desarrollo con C# (Albahari, J., Albahari, B., C# 7.0 in a Nutshell, O'Reilly Media, 2017).
+
+**Tendencias en Lenguajes de Programación**
+
+1. **Rust:** Rust es un lenguaje de programación de sistemas que se centra en la seguridad, especialmente en lo que respecta a la concurrencia y la memoria segura. Rust ha estado ganando popularidad recientemente debido a su rendimiento y seguridad (Klabnik, S., Nichols, C., The Rust Programming Language, No Starch Press, 2018).
+
+2. **Kotlin:** Kotlin es un lenguaje de programación moderno que se ejecuta en la Máquina Virtual de Java (JVM). Kotlin ha sido adoptado por Google como lenguaje preferido para el desarrollo de Android, lo que ha impulsado su popularidad (Jemerov, D., Isakova, S., Kotlin in Action, Manning Publications, 2017).
+
+3. **Go:** Desarrollado por Google, Go (o Golang) es un lenguaje de programación que se centra en la simplicidad y la eficiencia. Es especialmente adecuado para aplicaciones de red y de sistemas distribuidos (Donovan, A.A., Kernighan, B.W., The Go Programming Language, Addison-Wesley Professional, 2015).
+
+4. **Swift:** Swift es el lenguaje de programación desarrollado por Apple para reemplazar Objective-C para el iOS y macOS. Swift ofrece una sintaxis más limpia y segura, y está ganando popularidad entre los desarrolladores de Apple (Hudson, P., Pro Swift, Hacking with Swift, 2016).
+
+**Tendencias Generales en Programación**
+
+1. **Programación Funcional:** Aunque la programación funcional no es nueva, ha estado ganando más atención recientemente. Los lenguajes como Scala y Haskell son puramente funcionales, mientras que otros lenguajes, como JavaScript y Python, están incorporando más características funcionales.
+
+2. **Desarrollo Web Full Stack con JavaScript:** Con la introducción de Node.js, los desarrolladores pueden usar JavaScript tanto en el front-end como en el back-end. Esta tendencia hacia el desarrollo web full stack con JavaScript está creciendo.
+
+3. **Lenguajes Específicos de Dominio (DSL):** Los DSL son lenguajes de programación especializados en un dominio específico. Estos lenguajes permiten resolver problemas o tareas específicas de manera más eficiente que con un lenguaje de programación general. Ejemplos de DSL incluyen SQL para consultas de bases de datos y HTML para la creación de páginas web.
+
+4. **Aprendizaje Automático y Ciencia de Datos:** Con el auge del Big Data, la ciencia de datos y el aprendizaje automático se han vuelto cada vez más importantes. Los lenguajes de programación como Python y R son particularmente populares en este campo debido a sus robustas bibliotecas y herramientas.
+
+5. **Lenguajes de Programación Seguros:** Con la creciente importancia de la seguridad en la informática, los lenguajes de programación que enfatizan la seguridad, como Rust, están ganando popularidad. Estos lenguajes intentan prevenir errores comunes que pueden llevar a vulnerabilidades de seguridad.
+
+## 6. Conclusiones
+## 7. Bibliografía
+
+> Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Pearson/Addison Wesley.
+Referencias:
+> Patterson, D. A., & Hennessy, J. L. (2013). Computer Organization and Design: The Hardware/Software Interface (5th ed.). Morgan Kaufmann.
+> McConnell, S. (2004). Code Complete: A Practical Handbook of Software Construction (2nd ed.). Microsoft Press.
+Gamma, E., Helm, R., Johnson, R., & V
+> Sebesta, R. W. (2016). Concepts of Programming Languages (11th ed.). Pearson.
+> Mitchell, J. C. (2003). Concepts in Programming Languages. Cambridge University Press.
 
 
+
+---
 ## Clasificación en función de los paradigmas de programación
 
 Los lenguajes de programación también pueden ser clasificados según el paradigma de programación que utilizan. Los paradigmas de programación son formas de clasificar los lenguajes de programación según sus características. Los cuatro paradigmas más comunes son: imperativo, declarativo, orientado a objetos y funcional.
@@ -223,33 +291,3 @@ Los lenguajes funcionales son aquellos en los que los programas se componen de f
 Todos los lenguajes de programación se utilizan para escribir software y pueden ser usados para crear programas complejos. Sin embargo, los diferentes paradigmas de programación enfatizan diferentes formas de pensar sobre los problemas y de organizar y estructurar el código para resolverlos.
 
 Además de estos cuatro, existen otros paradigmas de programación como la programación lógica (Prolog), programación concurrente (Erlang), programación orientada a aspectos (AspectJ), entre otros.
-
-## Características y cualidades
-
-Los lenguajes de programación son herramientas que permiten a los desarrolladores crear software. Para ser efectivos, estos lenguajes deben poseer ciertas características o cualidades. Aquí te menciono algunas de las más importantes:
-
-1. **Legibilidad y Claridad:** Un buen lenguaje de programación debe ser fácil de leer y entender. Esto no solo facilita el aprendizaje del lenguaje, sino que también hace más sencillo el mantenimiento y la revisión del código en el futuro.
-
-2. **Eficiencia:** Los lenguajes de programación deben permitir la creación de software que se ejecute de manera eficiente. Esto implica tanto la velocidad de ejecución como el uso eficiente de los recursos del sistema, como la memoria y el procesador.
-
-3. **Portabilidad:** La portabilidad se refiere a la capacidad de un programa para ser ejecutado en diferentes plataformas sin necesidad de cambios significativos. Un lenguaje de programación con alta portabilidad permitirá que el código escrito en él se ejecute en una variedad de sistemas operativos y arquitecturas de hardware.
-
-4. **Expresividad:** Un lenguaje de programación debe ser expresivo, es decir, debe permitir a los programadores expresar sus ideas de manera clara y concisa. Un lenguaje de programación expresivo puede hacer que el código sea más legible y fácil de mantener.
-
-5. **Uniformidad y Consistencia:** Los buenos lenguajes de programación suelen tener reglas y estructuras consistentes, lo que facilita su aprendizaje y uso. Además, esto puede reducir la probabilidad de errores.
-
-6. **Robustez y Seguridad:** Un lenguaje de programación debe ser robusto y proporcionar mecanismos para manejar errores y excepciones. Además, debe proporcionar características que ayuden a prevenir problemas de seguridad, como el desbordamiento de búfer o la inyección de código.
-
-7. **Soporte y Comunidad:** Un buen lenguaje de programación a menudo tiene un fuerte soporte y una comunidad activa. Esto puede incluir documentación extensa, una gran cantidad de bibliotecas y marcos de trabajo, y una comunidad de desarrolladores que pueden proporcionar asistencia y soporte.
-
-Cabe destacar que no todos los lenguajes de programación necesitan todas estas características en la misma medida. Dependiendo de la aplicación específica, algunas características pueden ser más importantes que otras. Por ejemplo, para el desarrollo de sistemas embebidos, la eficiencia y el control a bajo nivel pueden ser más importantes que la facilidad de uso o la legibilidad.
-
-# Bibliografía
-
-> Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Pearson/Addison Wesley.
-Referencias:
-> Patterson, D. A., & Hennessy, J. L. (2013). Computer Organization and Design: The Hardware/Software Interface (5th ed.). Morgan Kaufmann.
-> McConnell, S. (2004). Code Complete: A Practical Handbook of Software Construction (2nd ed.). Microsoft Press.
-Gamma, E., Helm, R., Johnson, R., & V
-> Sebesta, R. W. (2016). Concepts of Programming Languages (11th ed.). Pearson.
-> Mitchell, J. C. (2003). Concepts in Programming Languages. Cambridge University Press.
