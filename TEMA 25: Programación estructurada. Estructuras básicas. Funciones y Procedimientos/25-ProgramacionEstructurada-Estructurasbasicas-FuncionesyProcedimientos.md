@@ -27,7 +27,7 @@ Los fundamentos de la programación estructurada se basan en las siguientes idea
 
 > b. **Selección:** Se utiliza para tomar decisiones en función de ciertas condiciones, como "if", "if-else" y "switch-case".
 
-> c. **Repetición: **Se utiliza para ejecutar un bloque de código varias veces, dependiendo de una condición. Incluye estructuras como "for", "while" y "do-while".
+> c. **Repetición:** Se utiliza para ejecutar un bloque de código varias veces, dependiendo de una condición. Incluye estructuras como "for", "while" y "do-while".
 
 **Variables y tipos de datos:** La programación estructurada requiere el uso de variables y tipos de datos para almacenar y manipular información en un programa. Las variables tienen un tipo de dato asociado que define el tipo de información que pueden almacenar (enteros, flotantes, caracteres, etc.).
 
@@ -148,7 +148,7 @@ Las características principales de un procedimiento son las siguientes:
 
 En programación, cuando pasamos parámetros a una función o método, generalmente lo hacemos de una de dos maneras: *paso por valor* o *paso por referencia.* En el caso del lenguaje de programación Java, debido a su diseño y semántica, se dice a menudo que los parámetros se pasan "por valor". Sin embargo, es importante entender lo que realmente significa en este contexto.
 
-**Paso por valor: **En el paso por valor, una copia del valor del argumento se pasa a la función. Cualquier cambio que hagas en el parámetro dentro de la función no afectará el valor original. Java utiliza el paso por valor para tipos de datos primitivos.
+**Paso por valor:** En el paso por valor, una copia del valor del argumento se pasa a la función. Cualquier cambio que hagas en el parámetro dentro de la función no afectará el valor original. Java utiliza el paso por valor para tipos de datos primitivos.
 
 Ejemplo en Java:
 ```java 
@@ -205,7 +205,7 @@ En este ejemplo, el método updateObjectValue cambia el valor del objeto MyObjec
 ## Ámbito o scope
 El ámbito (también conocido como "scope" en inglés) de una variable, parámetro o método se refiere a la región del código en la que es visible y puede ser referenciada o accedida. Los conceptos clave en relación con el ámbito incluyen el ámbito de bloque, el ámbito de clase y el ámbito de método.
 
-**Ámbito de bloque: **Una variable definida dentro de un bloque de código (como dentro de un método, un bucle for o una declaración if) solo es visible y accesible dentro de ese bloque de código.
+**Ámbito de bloque:** Una variable definida dentro de un bloque de código (como dentro de un método, un bucle for o una declaración if) solo es visible y accesible dentro de ese bloque de código.
 
 Ejemplo en Java:
 ```java 
