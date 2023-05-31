@@ -19,8 +19,13 @@
     - [5.1. Sobrecarga de método](#51-sobrecarga-de-método)
     - [5.2. Sobrecarga de operadores](#52-sobrecarga-de-operadores)
   - [6. Lenguajes Orientados a objetos](#6-lenguajes-orientados-a-objetos)
-    - [6.1. Java](#61-java)
-    - [6.2. Lenguajes más utilizados y orientación a objetos](#62-lenguajes-más-utilizados-y-orientación-a-objetos)
+    - [6.1. Lenguajes orientados a objetos puros e híbridos](#61-lenguajes-orientados-a-objetos-puros-e-híbridos)
+    - [6.2. Java](#62-java)
+    - [6.2.1. Tipos de herencia y polimorfismo en Java](#621-tipos-de-herencia-y-polimorfismo-en-java)
+        - [Herencia simple en Java](#herencia-simple-en-java)
+        - [Polimorfismo en Java](#polimorfismo-en-java)
+    - [6.2.2. Clases abstractas e interfaces](#622-clases-abstractas-e-interfaces)
+    - [6.3. Lenguajes más utilizados y orientación a objetos](#63-lenguajes-más-utilizados-y-orientación-a-objetos)
   - [7. Conclusión](#7-conclusión)
     - [7.1. Relación del tema con la enseñanza en fp](#71-relación-del-tema-con-la-enseñanza-en-fp)
   - [Referencias Bibliográficas:](#referencias-bibliográficas)
@@ -98,7 +103,7 @@ Existen varios tipos de herencia en la programación orientada a objetos, los cu
 
 - **Herencia múltiple**: Una clase puede heredar de varias clases. Este tipo de herencia puede ser poderoso, pero también puede llevar a complicaciones, como el problema del diamante (cuando una clase hereda de dos clases que a su vez heredan de una misma clase). Algunos lenguajes de programación, como Python, permiten la herencia múltiple, mientras que otros, como Java, no la soportan.
 
-- **Herencia multnivel**: Una clase puede heredar de otra clase que a su vez hereda de otra clase, y así sucesivamente. Por ejemplo, podríamos tener una clase 'Mamífero' que hereda de 'Animal', y luego una clase 'Perro' que hereda de 'Mamífero'.
+- **Herencia multinivel**: Una clase puede heredar de otra clase que a su vez hereda de otra clase, y así sucesivamente. Por ejemplo, podríamos tener una clase 'Mamífero' que hereda de 'Animal', y luego una clase 'Perro' que hereda de 'Mamífero'.
 
 ### 4.3. Funcionalidades de la herencia
 
@@ -161,9 +166,16 @@ En este caso, si tienes dos vectores v1 y v2, puedes sumarlos simplemente escrib
 
 Es importante destacar que no todos los lenguajes de programación permiten la sobrecarga de operadores. Por ejemplo, Java no lo permite, mientras que lenguajes como C++ y Python sí.
 
+
+
 ## 6. Lenguajes Orientados a objetos
 
-### 6.1. Java
+### 6.1. Lenguajes orientados a objetos puros e híbridos
+Los lenguajes orientados a objetos puros son aquellos que están completamente diseñados y orientados a la Programación Orientada a Objetos, donde todos los elementos del lenguaje son objetos y se siguen rigurosamente los principios de la POO. Ejemplos de lenguajes orientados a objetos puros incluyen Smalltalk y Ruby.
+
+Por otro lado, los lenguajes orientados a objetos híbridos son aquellos que combinan características de la POO con elementos de otros paradigmas de programación, como la programación imperativa o la programación funcional. Lenguajes como Java y C++ son considerados lenguajes orientados a objetos híbridos, ya que permiten la programación orientada a objetos pero también admiten otros estilos de programación.
+
+### 6.2. Java
 
 Java es uno de los lenguajes de programación orientados a objetos más populares y ampliamente utilizados. Fue desarrollado por Sun Microsystems (ahora propiedad de Oracle) en la década de 1990 con el objetivo de ser "simple, orientado a objetos y familiar" (Gosling et al., 2000). 
 
@@ -193,8 +205,60 @@ public class Perro {
     }
 }
 ```
+### 6.2.1. Tipos de herencia y polimorfismo en Java
+En Java, se pueden implementar diferentes tipos de herencia y polimorfismo. A continuación, se explican algunos ejemplos de cada uno:
 
-### 6.2. Lenguajes más utilizados y orientación a objetos
+##### Herencia simple en Java
+La herencia simple en Java permite que una subclase herede de una única superclase. La subclase adquiere los atributos y métodos de la superclase y puede añadir nuevos atributos y métodos propios.
+
+```java
+
+public class Animal {
+    public void emitirSonido() {
+        System.out.println("El animal emite un sonido");
+    }
+}
+
+public class Perro extends Animal {
+    public void ladrar() {
+        System.out.println("El perro está ladrando");
+    }
+}
+```
+
+En este ejemplo, la clase Perro hereda de la clase Animal. La subclase Perro tiene su propio método ladrar(), además de heredar el método emitirSonido() de la superclase Animal.
+
+##### Polimorfismo en Java
+El polimorfismo en Java se puede lograr mediante la herencia y la implementación de interfaces. Permite utilizar un objeto de una subclase como si fuera un objeto de la superclase, permitiendo así reutilizar el código y hacer que el programa sea más flexible.
+
+```java
+public interface Animal {
+    void emitirSonido();
+}
+
+public class Perro implements Animal {
+    public void emitirSonido() {
+        System.out.println("El perro ladra");
+    }
+}
+
+public class Gato implements Animal {
+    public void emitirSonido() {
+        System.out.println("El gato maulla");
+    }
+}
+```
+
+En este ejemplo, la interfaz Animal define el método emitirSonido(). La clase Perro y la clase Gato implementan la interfaz Animal y proporcionan su propia implementación del método emitirSonido(). Luego, se puede tratar un objeto de tipo Perro o Gato como un objeto de tipo Animal y llamar al método emitirSonido() en ambos casos.
+
+### 6.2.2. Clases abstractas e interfaces
+En Java, las clases abstractas e interfaces son constructos utilizados para definir comportamientos y establecer contratos para las clases que las implementan.
+
+**Clases abstractas:** Una clase abstracta en Java es una clase que no se puede instanciar directamente, sino que se utiliza como base para otras clases. Puede contener métodos abstractos (sin implementación) y métodos concretos (con implementación). Las clases que heredan de una clase abstracta deben implementar todos los métodos abstractos definidos en la clase padre.
+
+**Interfaces:** Una interfaz en Java es una colección de métodos abstractos (sin implementación) y constantes. Las interfaces se utilizan para definir un contrato que las clases deben cumplir. Una clase puede implementar múltiples interfaces, lo que permite lograr la herencia múltiple en Java.
+
+### 6.3. Lenguajes más utilizados y orientación a objetos
 
 Muchos de los lenguajes de programación más utilizados son orientados a objetos o incluyen características de la programación orientada a objetos. Algunos de estos incluyen:
 
