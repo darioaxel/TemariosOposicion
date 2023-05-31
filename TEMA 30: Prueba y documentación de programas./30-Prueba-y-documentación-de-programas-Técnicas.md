@@ -34,7 +34,7 @@
 - [7. Bibliografía](#7-bibliografía)
 
 # 1. Introducción
-# # 2. Ciclo de vida del software
+# 2. Ciclo de vida del software
 
 El ciclo de vida del software comprende las distintas etapas que un producto de software atraviesa desde su concepción inicial hasta su retiro o final de vida. Este proceso permite a los ingenieros de software y a los equipos de desarrollo controlar y mejorar la calidad del software, así como facilitar el mantenimiento y la mejora continua (Sommerville, 2023).
 
@@ -96,8 +96,6 @@ Las pruebas de integración se realizan cuando varias unidades de software se co
 
 ### 3.3.3. Pruebas de sistema
 
-Las pruebas de sistema se realizan en el software completo para asegurarse de que funciona como un todo coherente. Estas pruebas ayudan a garantizar que todas las ### 3.3.3. Pruebas de sistema
-
 Las pruebas de sistema se realizan en el software completo para asegurarse de que funciona como un todo coherente. Estas pruebas ayudan a garantizar que todas las partes del sistema interactúan como se esperaba y que el sistema cumple con los requisitos especificados. Por ejemplo, en un sistema de comercio electrónico, una prueba de sistema podría implicar probar todo el flujo de compra, desde la selección de un producto hasta el pago y la confirmación del pedido.
 
 ### 3.3.4. Pruebas de aceptación de usuario
@@ -105,6 +103,7 @@ Las pruebas de sistema se realizan en el software completo para asegurarse de qu
 Las pruebas de aceptación de usuario (UAT) son el último nivel de pruebas y son realizadas por los usuarios finales. El propósito de estas pruebas es confirmar que el sistema cumple con los requisitos del usuario y funciona correctamente en su entorno operativo previsto. Siguiendo con el ejemplo del sistema de comercio electrónico, los usuarios podrían probar el proceso de compra para asegurarse de que es fácil de usar y funciona como esperan.
 
 Cada uno de estos niveles de pruebas es fundamental para asegurar la calidad del software y la satisfacción del usuario.
+
 # 4. Documentación de programas
 
 La documentación de programas es un componente crucial en el desarrollo y mantenimiento del software. Proporciona información detallada sobre el diseño, funcionamiento y uso del software, facilitando su comprensión, mantenimiento y evolución (Sommerville, 2023).
@@ -176,6 +175,7 @@ Por ejemplo, si se realiza una actualización importante en el software, es nece
 Además, es importante fomentar una cultura de actualización y mejora continua de la documentación dentro del equipo de desarrollo. Esto puede incluir la asignación de responsabilidades claras para mantener y actualizar la documentación, así como la realización de revisiones periódicas para identificar áreas de mejora.
 
 La documentación precisa, actualizada y bien mantenida es esencial para garantizar la comprensión y el éxito del software a largo plazo.
+
 # 6. Conclusiones
 
 En el contexto del tema "Prueba y documentación de programas", es importante destacar algunas conclusiones clave sobre la importancia y aplicación de estas prácticas en el desarrollo de software y su relación con el sistema de educación de FP (Formación Profesional).
