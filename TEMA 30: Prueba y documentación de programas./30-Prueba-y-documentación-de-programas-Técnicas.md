@@ -4,7 +4,7 @@
 
 - [Tema 30.Prueba y documentación de programas. Técnicas](#tema-30prueba-y-documentación-de-programas-técnicas)
 - [1. Introducción](#1-introducción)
-- [# 2. Ciclo de vida del software](#-2-ciclo-de-vida-del-software)
+- [2. Ciclo de vida del software](#2-ciclo-de-vida-del-software)
   - [2.1. La documentación en los distintos tipos de ciclo de vida](#21-la-documentación-en-los-distintos-tipos-de-ciclo-de-vida)
   - [2.2. Las pruebas en los distintos tipos de ciclo de vida](#22-las-pruebas-en-los-distintos-tipos-de-ciclo-de-vida)
 - [3. Técnicas para la realización de pruebas de programas](#3-técnicas-para-la-realización-de-pruebas-de-programas)
