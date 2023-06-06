@@ -35,7 +35,7 @@ Además, los sistemas operativos móviles como Android e iOS han revolucionado l
 
 ## Definición de SSOO
 
-Un sistema operativo es un conjunto de programas y componentes de software que actúan como una capa de abstracción y control entre el hardware de una computadora y las aplicaciones de usuario. Su función principal es gestionar y coordinar los recursos del sistema, como la CPU, la memoria, los dispositivos de entrada/salida y el almacenamiento, para proporcionar un entorno eficiente, seguro y fácil de usar en el que los usuarios y las aplicaciones puedan interactuar y realizar tareas. Además, el sistema operativo ofrece servicios y funciones esenciales, como la gestión de procesos, la administración de memoria, el sistema de archivos y la interfaz de usuario, facilitando el desarrollo y la ejecución de programas de software.
+Un *sistema operativo es un conjunto de programas y componentes de software que actúan como una capa de abstracción y control entre el hardware de una computadora y las aplicaciones de usuario.* Su función principal es gestionar y coordinar los recursos del sistema, como la CPU, la memoria, los dispositivos de entrada/salida y el almacenamiento, para proporcionar un entorno eficiente, seguro y fácil de usar en el que los usuarios y las aplicaciones puedan interactuar y realizar tareas. Además, el sistema operativo ofrece servicios y funciones esenciales, como la gestión de procesos, la administración de memoria, el sistema de archivos y la interfaz de usuario, facilitando el desarrollo y la ejecución de programas de software.
 
 # Proceso e hilo
 
@@ -57,17 +57,17 @@ El Bloque de Control de Procesos (BCP) es una estructura de datos que contiene i
 ### El ciclo de vida de un proceso
 Según Tanenbaum (2015), incluye varias etapas:
 
-- Creación: el sistema operativo crea un nuevo proceso y asigna recursos.
-- Ejecución: el proceso se encuentra en la CPU y se ejecuta.
-- Bloqueo: el proceso espera un evento, como la finalización de una operación de E/S.
-- Desbloqueo: el proceso es despertado por un evento y se encuentra listo para ejecutarse.
-- Terminación: el proceso ha completado su ejecución y libera los recursos asignados.
+- **Creación**: el sistema operativo crea un nuevo proceso y asigna recursos.
+- **Ejecución**: el proceso se encuentra en la CPU y se ejecuta.
+- **Bloqueo**: el proceso espera un evento, como la finalización de una operación de E/S.
+- **Desbloqueo**: el proceso es despertado por un evento y se encuentra listo para ejecutarse.
+- **Terminación**: el proceso ha completado su ejecución y libera los recursos asignados.
 
 ### Concurrencia entre procesos
 
-La concurrencia de procesos se refiere a la capacidad del sistema operativo para administrar múltiples procesos que se ejecutan simultáneamente, compartiendo recursos y tiempo de CPU (Patterson & Hennessy, 2018). Los sistemas operativos gestionan la concurrencia de procesos mediante el uso de técnicas como la multiprogramación y la planificación de procesos, asegurando que todos los procesos reciban una porción justa de los recursos y tiempo de CPU disponibles.
+La **concurrencia** de procesos se refiere a la capacidad del sistema operativo para administrar múltiples procesos que se ejecutan simultáneamente, compartiendo recursos y tiempo de CPU (Patterson & Hennessy, 2018). Los sistemas operativos gestionan la concurrencia de procesos mediante el uso de técnicas como la multiprogramación y la planificación de procesos, asegurando que todos los procesos reciban una porción justa de los recursos y tiempo de CPU disponibles.
 
-La multiprogramación permite al sistema operativo cargar varios procesos en memoria al mismo tiempo, mientras que la planificación de procesos decide cuándo y por cuánto tiempo se ejecuta cada proceso. La concurrencia de procesos mejora la utilización de recursos y permite a los sistemas informáticos realizar múltiples tareas de manera eficiente (Tanenbaum, 2015).
+La **multiprogramación** permite al sistema operativo cargar varios procesos en memoria al mismo tiempo, mientras que la planificación de procesos decide cuándo y por cuánto tiempo se ejecuta cada proceso. La concurrencia de procesos mejora la utilización de recursos y permite a los sistemas informáticos realizar múltiples tareas de manera eficiente (Tanenbaum, 2015).
 
 ### Interrupciones y cambio de procesos
 
@@ -81,7 +81,7 @@ Cuando una interrupción ocurre, el sistema operativo debe realizar un cambio de
 
 - Ejecutar la rutina de servicio de interrupción: El sistema operativo ejecuta la rutina de servicio de interrupción, que es un conjunto de instrucciones diseñadas para manejar la interrupción específica. Esta rutina puede realizar acciones como leer datos de un dispositivo de E/S, actualizar la información del proceso o cambiar el estado del proceso.
 
--Decidir el siguiente proceso a ejecutar: Tras atender la interrupción, el sistema operativo utiliza el planificador de procesos para decidir qué proceso debe ser ejecutado a continuación. Esto puede involucrar algoritmos de planificación como el Round Robin, prioridad o planificación basada en tiempo compartido, entre otros.
+- Decidir el siguiente proceso a ejecutar: Tras atender la interrupción, el sistema operativo utiliza el planificador de procesos para decidir qué proceso debe ser ejecutado a continuación. Esto puede involucrar algoritmos de planificación como el Round Robin, prioridad o planificación basada en tiempo compartido, entre otros.
 
 - Cargar el estado del nuevo proceso: El sistema operativo carga el estado del nuevo proceso seleccionado desde su BCP, restaurando el contenido de los registros de la CPU, el contador de programa y cualquier otra información relevante.
 
@@ -103,27 +103,27 @@ La gestión de hilos en un sistema operativo es similar a la gestión de proceso
 
 La comunicación entre procesos (IPC, por sus siglas en inglés) permite que los procesos compartan información y colaboren en la realización de tareas. Existen dos enfoques principales para la IPC (Tanenbaum, 2015):
 
-Tubos (pipes): Los pipes permiten la comunicación unidireccional entre dos procesos relacionados. Un proceso escribe en un extremo del pipe, mientras que el otro proceso lee del otro extremo. Los pipes son útiles para implementar la comunicación en secuencias de procesos en sistemas operativos como Unix y Linux.
+- Tubos (pipes): Los pipes permiten la comunicación unidireccional entre dos procesos relacionados. Un proceso escribe en un extremo del pipe, mientras que el otro proceso lee del otro extremo. Los pipes son útiles para implementar la comunicación en secuencias de procesos en sistemas operativos como Unix y Linux.
 
-Tubos con nombre (named pipes): Los named pipes son similares a los pipes regulares, pero permiten la comunicación entre procesos no relacionados. Los named pipes tienen un nombre en el sistema de archivos y pueden ser accedidos por cualquier proceso que tenga los permisos adecuados. Son comunes en sistemas operativos Unix, Linux y Windows.
+- Tubos con nombre (named pipes): Los named pipes son similares a los pipes regulares, pero permiten la comunicación entre procesos no relacionados. Los named pipes tienen un nombre en el sistema de archivos y pueden ser accedidos por cualquier proceso que tenga los permisos adecuados. Son comunes en sistemas operativos Unix, Linux y Windows.
 
-Sockets: Los sockets son mecanismos de comunicación bidireccional que permiten a los procesos comunicarse a través de redes o en la misma máquina. Los sockets son ampliamente utilizados en aplicaciones de red y sistemas distribuidos, y están disponibles en la mayoría de los sistemas operativos, incluidos Unix, Linux, Windows y macOS.
+- Sockets: Los sockets son mecanismos de comunicación bidireccional que permiten a los procesos comunicarse a través de redes o en la misma máquina. Los sockets son ampliamente utilizados en aplicaciones de red y sistemas distribuidos, y están disponibles en la mayoría de los sistemas operativos, incluidos Unix, Linux, Windows y macOS.
 
-Memoria compartida: La memoria compartida es un mecanismo de IPC que permite a varios procesos acceder a una región de memoria común. Los procesos pueden leer y escribir en la memoria compartida para intercambiar información. La memoria compartida es un método de comunicación eficiente y de alto rendimiento, pero requiere la implementación de mecanismos de sincronización para evitar condiciones de carrera y garantizar la coherencia de los datos.
+- Memoria compartida: La memoria compartida es un mecanismo de IPC que permite a varios procesos acceder a una región de memoria común. Los procesos pueden leer y escribir en la memoria compartida para intercambiar información. La memoria compartida es un método de comunicación eficiente y de alto rendimiento, pero requiere la implementación de mecanismos de sincronización para evitar condiciones de carrera y garantizar la coherencia de los datos.
 
-Mensajería (message passing): La mensajería es un mecanismo de IPC en el que los procesos intercambian mensajes para comunicarse y sincronizarse. Los mensajes pueden ser enviados a través de canales de comunicación establecidos entre procesos y pueden ser de tamaño fijo o variable. Los sistemas operativos y las bibliotecas de programación a menudo proporcionan funciones y abstracciones para facilitar el paso de mensajes entre procesos.
+- Mensajería (message passing): La mensajería es un mecanismo de IPC en el que los procesos intercambian mensajes para comunicarse y sincronizarse. Los mensajes pueden ser enviados a través de canales de comunicación establecidos entre procesos y pueden ser de tamaño fijo o variable. Los sistemas operativos y las bibliotecas de programación a menudo proporcionan funciones y abstracciones para facilitar el paso de mensajes entre procesos.
 
-Señales (signals): Las señales son un mecanismo de IPC que permite a los procesos enviar notificaciones de eventos a otros procesos. Las señales se utilizan para indicar la ocurrencia de eventos como interrupciones, terminación de procesos o cambios en el estado del sistema. Los sistemas operativos como Unix, Linux y Windows proporcionan soporte para señales y funciones para enviar, recibir y manejar señales entre procesos.
+- Señales (signals): Las señales son un mecanismo de IPC que permite a los procesos enviar notificaciones de eventos a otros procesos. Las señales se utilizan para indicar la ocurrencia de eventos como interrupciones, terminación de procesos o cambios en el estado del sistema. Los sistemas operativos como Unix, Linux y Windows proporcionan soporte para señales y funciones para enviar, recibir y manejar señales entre procesos.
 
 ## Sincronización de procesos:
 
 La sincronización de procesos es necesaria para garantizar la correcta secuencia y coordinación entre procesos que comparten recursos o dependen unos de otros. Existen varias técnicas y mecanismos de sincronización (Stallings, 2018):
 
-Semáforos: Son variables enteras utilizadas para controlar el acceso a recursos compartidos. Los semáforos pueden ser incrementados o decrementados para indicar la disponibilidad de un recurso, y los procesos pueden esperar o liberar un semáforo para obtener o liberar el acceso a dicho recurso. Los semáforos son utilizados en muchos sistemas operativos, incluidos Unix y Windows.
+- Semáforos: Son variables enteras utilizadas para controlar el acceso a recursos compartidos. Los semáforos pueden ser incrementados o decrementados para indicar la disponibilidad de un recurso, y los procesos pueden esperar o liberar un semáforo para obtener o liberar el acceso a dicho recurso. Los semáforos son utilizados en muchos sistemas operativos, incluidos Unix y Windows.
 
-Monitores: Son abstracciones de alto nivel que encapsulan datos compartidos y funciones de sincronización en una estructura de datos. Los monitores garantizan que solo un proceso puede acceder a los datos compartidos en un momento dado, evitando condiciones de carrera. Ejemplos de sistemas que utilizan monitores incluyen sistemas basados en lenguajes de programación concurrentes como Java y Ada.
+- Monitores: Son abstracciones de alto nivel que encapsulan datos compartidos y funciones de sincronización en una estructura de datos. Los monitores garantizan que solo un proceso puede acceder a los datos compartidos en un momento dado, evitando condiciones de carrera. Ejemplos de sistemas que utilizan monitores incluyen sistemas basados en lenguajes de programación concurrentes como Java y Ada.
 
-Variables de condición: Permiten a los procesos esperar hasta que se cumpla una condición específica. Las variables de condición se utilizan en combinación con monitores u otros mecanismos de sincronización para coordinar el acceso a recursos compartidos. Ejemplos de sistemas que utilizan variables de condición incluyen sistemas basados en POSIX y sistemas operativos que implementan la API de Pthreads.
+- Variables de condición: Permiten a los procesos esperar hasta que se cumpla una condición específica. Las variables de condición se utilizan en combinación con monitores u otros mecanismos de sincronización para coordinar el acceso a recursos compartidos. Ejemplos de sistemas que utilizan variables de condición incluyen sistemas basados en POSIX y sistemas operativos que implementan la API de Pthreads.
 
 ## Concurrencia de procesos:
 
@@ -161,17 +161,17 @@ Para evitar interbloqueos, un sistema operativo debe diseñarse para eliminar al
 ## Planificación de procesos:
 Los objetivos de la planificación de procesos en un sistema operativo son garantizar la utilización eficiente y justa de los recursos del sistema, así como proporcionar un buen rendimiento y una experiencia de usuario adecuada. Según la bibliografía estudiada (Stallings, 2018; Tanenbaum, 2015; Patterson & Hennessy, 2018), los objetivos principales de la planificación de procesos son:
 
-Maximizar la utilización de la CPU: La planificación de procesos debe asegurar que la CPU esté ocupada realizando trabajo útil la mayor parte del tiempo, minimizando el tiempo de inactividad.
+- Maximizar la utilización de la CPU: La planificación de procesos debe asegurar que la CPU esté ocupada realizando trabajo útil la mayor parte del tiempo, minimizando el tiempo de inactividad.
 
-Maximizar el rendimiento: La planificación de procesos debe garantizar que se procese la mayor cantidad posible de trabajos en un período determinado, optimizando el rendimiento global del sistema.
+- Maximizar el rendimiento: La planificación de procesos debe garantizar que se procese la mayor cantidad posible de trabajos en un período determinado, optimizando el rendimiento global del sistema.
 
-Minimizar el tiempo de respuesta: La planificación de procesos debe asegurar que los procesos interactivos reciban atención rápida y oportuna, minimizando el tiempo que un usuario debe esperar para obtener una respuesta del sistema.
+- Minimizar el tiempo de respuesta: La planificación de procesos debe asegurar que los procesos interactivos reciban atención rápida y oportuna, minimizando el tiempo que un usuario debe esperar para obtener una respuesta del sistema.
 
-Minimizar el tiempo de espera: La planificación de procesos debe reducir el tiempo que los procesos pasan en cola esperando acceso a recursos, como la CPU o dispositivos de E/S.
+- Minimizar el tiempo de espera: La planificación de procesos debe reducir el tiempo que los procesos pasan en cola esperando acceso a recursos, como la CPU o dispositivos de E/S.
 
-Proporcionar equidad en la asignación de recursos: La planificación de procesos debe garantizar que todos los procesos tengan una oportunidad justa de acceder a los recursos del sistema, evitando la inanición y la monopolización de recursos.
+- Proporcionar equidad en la asignación de recursos: La planificación de procesos debe garantizar que todos los procesos tengan una oportunidad justa de acceder a los recursos del sistema, evitando la inanición y la monopolización de recursos.
 
-Garantizar la previsibilidad y la estabilidad del sistema: La planificación de procesos debe proporcionar un comportamiento consistente y predecible en cuanto a la ejecución de procesos y la asignación de recursos.
+- Garantizar la previsibilidad y la estabilidad del sistema: La planificación de procesos debe proporcionar un comportamiento consistente y predecible en cuanto a la ejecución de procesos y la asignación de recursos.
 
 Para lograr estos objetivos, los sistemas operativos implementan diversas políticas y algoritmos de planificación de procesos, como FIFO, SJF, Round Robin, planificación basada en prioridades y planificación de tiempo compartido (multinivel). Estas políticas y algoritmos tienen diferentes características y se adaptan mejor a diferentes tipos de cargas de trabajo y requisitos del sistema.
 
