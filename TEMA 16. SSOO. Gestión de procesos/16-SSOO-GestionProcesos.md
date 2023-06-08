@@ -215,4 +215,8 @@ Análisis de rendimiento de sistemas operativos: Los alumnos pueden utilizar her
 
 > Stallings, W. (2018). ***Operating Systems: Internals and Design Principles.*** Pearson.
 
-> Tanenbaum, A. S. (2015).*** Modern Operating Systems***. Pearson.
+> Tanenbaum, A. S. (2015).***Modern Operating Systems***. Pearson.
+> De Miguel Anasagasti (2016) ***Sistemas operativos***. Universidad politecnica de madrid
+
+
+> 
