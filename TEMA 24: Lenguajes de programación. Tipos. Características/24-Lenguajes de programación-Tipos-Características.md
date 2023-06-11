@@ -47,7 +47,7 @@ Los lenguajes de quinta generación (5GL) son lenguajes de programación orienta
 
 Los lenguajes de programación pueden ser clasificados como **compilados** o **interpretados**. Esta clasificación se basa en cómo se ejecuta el código escrito en estos lenguajes.
 
-**Lenguajes Compilados:**
+- **Lenguajes Compilados:**
 
 Los lenguajes compilados son aquellos en los que el código fuente es traducido directamente en código máquina por un compilador antes de que sea ejecutado. Este código máquina es específico para la arquitectura del sistema y no puede ser ejecutado en diferentes tipos de sistemas sin ser recompilado.
 
@@ -59,7 +59,7 @@ Los lenguajes compilados son aquellos en los que el código fuente es traducido 
 
 *Ejemplos:* C, C++, Swift, Go, Rust.
 
-**Lenguajes Interpretados:**
+- **Lenguajes Interpretados:**
 
 Los lenguajes interpretados son aquellos en los que el código fuente es leído y ejecutado línea por línea por un intérprete en tiempo de ejecución. Esto significa que el código no se traduce a código máquina antes de su ejecución.
 
@@ -75,7 +75,7 @@ Los lenguajes interpretados son aquellos en los que el código fuente es leído 
 
 Tanto los lenguajes compilados como los interpretados son utilizados para escribir software y ambos pueden ser usados para crear programas complejos. La principal diferencia entre ellos es cómo y cuándo se traduce el código a código máquina.
 
-**Otros tipos de lenguajes:**
+- **Otros tipos de lenguajes:**
 
 Además de los lenguajes compilados e interpretados, existe otro tipo de lenguaje conocido como lenguaje de programación de nivel intermedio o lenguajes de bytecode.
 
@@ -89,30 +89,32 @@ El beneficio de este enfoque es que permite una portabilidad similar a la de los
 
 Los lenguajes de programación se pueden clasificar en función de los paradigmas de programación que siguen. Un paradigma de programación es un enfoque o estilo particular para resolver problemas y diseñar soluciones utilizando un lenguaje de programación. A continuación se presentan algunos de los paradigmas de programación más relevantes y los lenguajes de programación asociados, basados en bibliografías destacadas:
 
-**Paradigma imperativo/procedural**
+- **Paradigma imperativo/procedural**
 El paradigma imperativo se basa en la ejecución secuencial de instrucciones y en la manipulación del estado del programa mediante variables y estructuras de control (como bucles y condicionales). Los lenguajes procedurales son un subconjunto de los lenguajes imperativos que se centran en la organización del código en procedimientos o funciones.
 
-*Lenguajes representativos*: C, Pascal, FORTRAN
-**Paradigma orientado a objetos**
+*Lenguajes representativos*: C, Pascal, FORTRAN 
+
+- **Paradigma orientado a objetos**
 El paradigma orientado a objetos se centra en la organización del código en objetos, que son instancias de clases que encapsulan datos y comportamientos. Este enfoque promueve la reutilización de código, la modularidad y el encapsulamiento.
 
 *Lenguajes representativos:* Java, C++, C#, Python, Ruby
-**Paradigma funcional**
+
+- **Paradigma funcional**
 El paradigma funcional trata la computación como una secuencia de funciones matemáticas y evita el cambio de estado y los datos mutables. Este enfoque promueve la programación sin efectos secundarios y puede facilitar el razonamiento sobre el código y la concurrencia.
 
 *Lenguajes representativos:* Haskell, Lisp, Erlang, ML, Scala
 
-**Paradigma lógico**
+- **Paradigma lógico**
 El paradigma lógico se basa en la programación declarativa, donde los programas consisten en declaraciones de hechos y reglas lógicas. El sistema de programación se encarga de deducir nuevas conclusiones y encontrar soluciones a los problemas.
 
-*Lenguajes representativos:* Prolog, Mercury
+*Lenguajes representativos:*  Prolog, Mercury
 
-**Paradigma de script**
+- **Paradigma de script**
 El paradigma de script se refiere a lenguajes de programación que se utilizan para la automatización de tareas, la manipulación de archivos y la interacción entre programas. Los lenguajes de script son a menudo interpretados en lugar de compilados y pueden ser utilizados para el desarrollo rápido de aplicaciones.
 
-*Lenguajes representativos:*JavaScript, Python, Perl, Ruby, Lua
+*Lenguajes representativos:* JavaScript, Python, Perl, Ruby, Lua
 
-Cabe destacar que algunos lenguajes de programación admiten múltiples paradigmas, lo que permite a los programadores utilizar diferentes enfoques según las necesidades del proyecto. Por ejemplo, Python y Scala admiten tanto la programación orientada
+Cabe destacar que algunos lenguajes de programación admiten múltiples paradigmas, lo que permite a los programadores utilizar diferentes enfoques según las necesidades del proyecto. Por ejemplo, Python y Scala admiten tanto la programación orientada a objetos como la programación funcional.
 
 ### 3.2. Clasificación por dominio de aplicación
 
