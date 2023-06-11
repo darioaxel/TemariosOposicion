@@ -32,7 +32,7 @@
 
 ## 2. Programación modular
 
-La **programación modular **es un enfoque de diseño de software que subdivide una aplicación en una serie de partes o módulos funcionales separados. Cada módulo se centra en una única responsabilidad y puede funcionar de forma independiente. Este enfoque tiene como objetivo hacer que los programas sean más fáciles de leer, entender, mantener y reutilizar.
+*La **programación modular** es un enfoque de diseño de software que subdivide una aplicación en una serie de partes o módulos funcionales separados. Cada módulo se centra en una única responsabilidad y puede funcionar de forma independiente. Este enfoque tiene como objetivo hacer que los programas sean más fáciles de leer, entender, mantener y reutilizar.*
 
 La programación modular surgió en los años 60 y 70 como respuesta a los desafíos que planteaba el crecimiento de los programas de software. A medida que los programas se volvían más grandes y complejos, era cada vez más difícil entender y mantener todo el código en un solo lugar. La programación modular ofrecía una solución a este problema, al permitir que los desarrolladores dividieran los programas en piezas más pequeñas y manejables.
 
