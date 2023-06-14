@@ -225,12 +225,15 @@ Para desarrollar este punto, es importante destacar que el mundo de la programac
 ## 6. Conclusiones
 ## 7. Bibliografía
 
-> Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Pearson/Addison Wesley.
-Referencias:
+> Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Pearson/Addison Wesley.  
+
 > Patterson, D. A., & Hennessy, J. L. (2013). Computer Organization and Design: The Hardware/Software Interface (5th ed.). Morgan Kaufmann.
+
 > McConnell, S. (2004). Code Complete: A Practical Handbook of Software Construction (2nd ed.). Microsoft Press.
 Gamma, E., Helm, R., Johnson, R., & V
+
 > Sebesta, R. W. (2016). Concepts of Programming Languages (11th ed.). Pearson.
+
 > Mitchell, J. C. (2003). Concepts in Programming Languages. Cambridge University Press.
 
 
